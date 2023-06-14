@@ -1,5 +1,12 @@
 {
   "item.morefood.cooked_carrot": "Gebackene Karotte",
   "item.morefood.carrot_pieces": "Karottenstücke",
-  "item.morefood.carrot_soup": "Karottensuppe"
+  "item.morefood.carrot_soup": "Karottensuppe",
+  "item.morefood.cooked_apple": "Gebackener Apfel",
+  "item.morefood.apple_pieces": "Apfelstücke",
+  "item.morefood.apple_soup": "Apfelsuppe",
+  "item.morefood.kelp_pieces": "Seetangstücke,",
+  "item.morefood.kelp_soup": "Seetangsuppe",
+  "item.morefood.potato_pieces": "Kartoffelstücke",
+  "item.morefood.potato_soup": "Kartoffelsuppe"
 }

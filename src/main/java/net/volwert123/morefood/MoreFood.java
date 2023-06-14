@@ -1,7 +1,6 @@
 package net.volwert123.morefood;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -51,6 +50,13 @@ public class MoreFood
             event.accept(MoreFoodItem.COOKED_CARROT);
             event.accept(MoreFoodItem.CARROT_PIECES);
             event.accept(MoreFoodItem.CARROT_SOUP);
+            event.accept(MoreFoodItem.COOKED_APPLE);
+            event.accept(MoreFoodItem.APPLE_PIECES);
+            event.accept(MoreFoodItem.APPLE_SOUP);
+            event.accept(MoreFoodItem.KELP_PIECES);
+            event.accept(MoreFoodItem.KELP_SOUP);
+            event.accept(MoreFoodItem.POTATO_PIECES);
+            event.accept(MoreFoodItem.POTATO_SOUP);
         }
     }
 

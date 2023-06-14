@@ -19,6 +19,13 @@ public class MoreFoodModelProvider extends ItemModelProvider {
         simpleItem(MoreFoodItem.COOKED_CARROT);
         simpleItem(MoreFoodItem.CARROT_PIECES);
         simpleItem(MoreFoodItem.CARROT_SOUP);
+        simpleItem(MoreFoodItem.COOKED_APPLE);
+        simpleItem(MoreFoodItem.APPLE_PIECES);
+        simpleItem(MoreFoodItem.APPLE_SOUP);
+        simpleItem(MoreFoodItem.KELP_PIECES);
+        simpleItem(MoreFoodItem.KELP_SOUP);
+        simpleItem(MoreFoodItem.POTATO_PIECES);
+        simpleItem(MoreFoodItem.POTATO_SOUP);
 
     }
     private void simpleItem(RegistryObject<Item> item){

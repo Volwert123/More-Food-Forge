@@ -1,5 +1,12 @@
 {
   "item.morefood.cooked_carrot": "Cooked Carrot",
   "item.morefood.carrot_pieces": "Carrot Pieces",
-  "item.morefood.carrot_soup": "Carrot Soup"
+  "item.morefood.carrot_soup": "Carrot Soup",
+  "item.morefood.cooked_apple": "Cooked Apple",
+  "item.morefood.apple_pieces": "Apple Pieces",
+  "item.morefood.apple_soup": "Apple Soup",
+  "item.morefood.kelp_pieces": "Kelp Pieces",
+  "item.morefood.kelp_soup": "Kelp Soup",
+  "item.morefood.potato_pieces": "Potato Pieces",
+  "item.morefood.potato_soup": "Potato Soup"
 }
