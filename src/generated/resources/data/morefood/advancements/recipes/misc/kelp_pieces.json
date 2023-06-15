@@ -30,5 +30,6 @@
     "recipes": [
       "morefood:kelp_pieces"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

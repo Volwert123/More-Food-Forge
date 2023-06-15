@@ -30,5 +30,6 @@
     "recipes": [
       "morefood:cooked_carrot_smoking"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

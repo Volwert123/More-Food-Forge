@@ -56,5 +56,6 @@
     "recipes": [
       "morefood:apple_soup"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

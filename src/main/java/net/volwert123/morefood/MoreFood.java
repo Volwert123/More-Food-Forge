@@ -3,7 +3,7 @@ package net.volwert123.morefood;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -33,6 +33,7 @@ public class MoreFood
         modEventBus.addListener(this::commonSetup);
 
         MoreFoodItem.register(modEventBus);
+        MoreFoodCreativeModeTabs.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -44,9 +45,9 @@ public class MoreFood
     private void commonSetup(final FMLCommonSetupEvent event)
     {}
 
-    private void addCreative(CreativeModeTabEvent.BuildContents event)
+    private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if (event.getTab() == MoreFoodCreativeModeTabs.MORE_FOOD_TAB){
+        if (event.getTab() == MoreFoodCreativeModeTabs.MOREFOOD_TAB.get()){
             event.accept(MoreFoodItem.COOKED_CARROT);
             event.accept(MoreFoodItem.CARROT_PIECES);
             event.accept(MoreFoodItem.CARROT_SOUP);

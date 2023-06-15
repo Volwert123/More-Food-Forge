@@ -56,5 +56,6 @@
     "recipes": [
       "morefood:kelp_soup"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

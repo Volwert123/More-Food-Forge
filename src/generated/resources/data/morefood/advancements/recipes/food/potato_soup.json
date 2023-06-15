@@ -56,5 +56,6 @@
     "recipes": [
       "morefood:potato_soup"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }
