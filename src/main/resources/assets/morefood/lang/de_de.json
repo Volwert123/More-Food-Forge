@@ -5,8 +5,13 @@
   "item.morefood.cooked_apple": "Gebackener Apfel",
   "item.morefood.apple_pieces": "Apfelstücke",
   "item.morefood.apple_soup": "Apfelsuppe",
-  "item.morefood.kelp_pieces": "Seetangstücke,",
+  "item.morefood.kelp_pieces": "Seetangstücke",
   "item.morefood.kelp_soup": "Seetangsuppe",
   "item.morefood.potato_pieces": "Kartoffelstücke",
-  "item.morefood.potato_soup": "Kartoffelsuppe"
+  "item.morefood.potato_soup": "Kartoffelsuppe",
+  "item.morefood.phantom.pieces": "Phantomstücke",
+  "item.morefood.phantom_soup": "Phantomsuppe",
+  "item.morefood.pufferfish_pieces": "Pufferfischstücke",
+  "item.morefood.pufferfish_soup": "Pufferfischsuppe",
+  "item.morefood.pumpking_soup": "Kürbissuppe"
 }

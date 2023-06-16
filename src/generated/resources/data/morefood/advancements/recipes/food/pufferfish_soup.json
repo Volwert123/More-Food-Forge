@@ -13,24 +13,24 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_potato": {
+    "has_pufferfish": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:potato"
+              "minecraft:pufferfish"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_potato_pieces": {
+    "has_pufferfish_pieces": {
       "conditions": {
         "items": [
           {
             "items": [
-              "morefood:potato_pieces"
+              "morefood:pufferfish_soup"
             ]
           }
         ]
@@ -39,7 +39,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "morefood:potato_soup"
+        "recipe": "morefood:pufferfish_soup"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -47,14 +47,14 @@
   "requirements": [
     [
       "has_bowl",
-      "has_potato_pieces",
-      "has_potato",
+      "has_pufferfish_pieces",
+      "has_pufferfish",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "morefood:potato_soup"
+      "morefood:pufferfish_soup"
     ]
   },
   "sends_telemetry_event": false

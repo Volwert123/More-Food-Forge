@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:pufferfish"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "morefood:pufferfish_pieces"
+  }
+}

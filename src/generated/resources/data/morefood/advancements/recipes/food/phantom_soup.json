@@ -13,24 +13,24 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_potato": {
+    "has_phantom_membrane": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:potato"
+              "minecraft:phantom_membrane"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_potato_pieces": {
+    "has_phantom_pieces": {
       "conditions": {
         "items": [
           {
             "items": [
-              "morefood:potato_pieces"
+              "morefood:phantom_pieces"
             ]
           }
         ]
@@ -39,7 +39,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "morefood:potato_soup"
+        "recipe": "morefood:phantom_soup"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -47,14 +47,14 @@
   "requirements": [
     [
       "has_bowl",
-      "has_potato_pieces",
-      "has_potato",
+      "has_phantom_pieces",
+      "has_phantom_membrane",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "morefood:potato_soup"
+      "morefood:phantom_soup"
     ]
   },
   "sends_telemetry_event": false

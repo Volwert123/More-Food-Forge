@@ -96,12 +96,50 @@ public class MoreFoodRecipeProvider extends RecipeProvider implements ICondition
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD,MoreFoodItem.POTATO_SOUP.get())
                 .requires(Items.BOWL.asItem())
-                .requires(MoreFoodItem.POTATO_SOUP.get())
+                .requires(MoreFoodItem.POTATO_PIECES.get())
                 .requires(Items.POTATO.asItem())
                 .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
-                .unlockedBy(getHasName(MoreFoodItem.POTATO_SOUP.get()), has(MoreFoodItem.POTATO_SOUP.get()))
+                .unlockedBy(getHasName(MoreFoodItem.POTATO_PIECES.get()), has(MoreFoodItem.POTATO_PIECES.get()))
                 .unlockedBy(getHasName(Items.POTATO.asItem()), has(Items.POTATO.asItem()))
                 .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.POTATO_SOUP.get())));
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,MoreFoodItem.PHANTOM_PIECES.get(),4)
+                .requires(Items.PHANTOM_MEMBRANE.asItem())
+                .unlockedBy(getHasName(Items.PHANTOM_MEMBRANE.asItem()), has(Items.PHANTOM_MEMBRANE.asItem()))
+                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.PHANTOM_PIECES.get())));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD,MoreFoodItem.PHANTOM_SOUP.get())
+                .requires(Items.BOWL.asItem())
+                .requires(MoreFoodItem.PHANTOM_PIECES.get())
+                .requires(Items.PHANTOM_MEMBRANE.asItem())
+                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
+                .unlockedBy(getHasName(MoreFoodItem.PHANTOM_PIECES.get()), has(MoreFoodItem.PHANTOM_PIECES.get()))
+                .unlockedBy(getHasName(Items.PHANTOM_MEMBRANE.asItem()), has(Items.PHANTOM_MEMBRANE.asItem()))
+                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.PHANTOM_SOUP.get())));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,MoreFoodItem.PUFFERFISH_PIECES.get(),4)
+                .requires(Items.PUFFERFISH.asItem())
+                .unlockedBy(getHasName(Items.PUFFERFISH.asItem()), has(Items.PUFFERFISH.asItem()))
+                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.PUFFERFISH_PIECES.get())));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD,MoreFoodItem.PUMPKING_SOUP.get())
+                .requires(Items.BOWL.asItem())
+                .requires(MoreFoodItem.PUFFERFISH_PIECES.get())
+                .requires(Items.PUFFERFISH.asItem())
+                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
+                .unlockedBy(getHasName(MoreFoodItem.PUFFERFISH_PIECES.get()), has(MoreFoodItem.PUFFERFISH_SOUP.get()))
+                .unlockedBy(getHasName(Items.PUFFERFISH.asItem()), has(Items.PUFFERFISH.asItem()))
+                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.PUFFERFISH_SOUP.get())));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD,MoreFoodItem.PUMPKING_SOUP.get())
+                .requires(Items.BOWL.asItem())
+                .requires(Items.PUMPKIN_SEEDS.asItem())
+                .requires(Items.PUMPKIN.asItem())
+                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
+                .unlockedBy(getHasName(Items.PUMPKIN_SEEDS.asItem()), has(Items.PUMPKIN_SEEDS.asItem()))
+                .unlockedBy(getHasName(Items.PUMPKIN.asItem()), has(Items.PUMPKIN.asItem()))
+                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.PUMPKING_SOUP.get())));
 
     }
 

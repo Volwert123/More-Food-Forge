@@ -13,24 +13,24 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_potato": {
+    "has_pumpkin": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:potato"
+              "minecraft:pumpkin"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_potato_pieces": {
+    "has_pumpkin_seeds": {
       "conditions": {
         "items": [
           {
             "items": [
-              "morefood:potato_pieces"
+              "minecraft:pumpkin_seeds"
             ]
           }
         ]
@@ -39,7 +39,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "morefood:potato_soup"
+        "recipe": "morefood:pumpking_soup"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -47,14 +47,14 @@
   "requirements": [
     [
       "has_bowl",
-      "has_potato_pieces",
-      "has_potato",
+      "has_pumpkin_seeds",
+      "has_pumpkin",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "morefood:potato_soup"
+      "morefood:pumpking_soup"
     ]
   },
   "sends_telemetry_event": false

@@ -6,13 +6,13 @@
       "item": "minecraft:bowl"
     },
     {
-      "item": "morefood:potato_pieces"
+      "item": "minecraft:pumpkin_seeds"
     },
     {
-      "item": "minecraft:potato"
+      "item": "minecraft:pumpkin"
     }
   ],
   "result": {
-    "item": "morefood:potato_soup"
+    "item": "morefood:pumpking_soup"
   }
 }

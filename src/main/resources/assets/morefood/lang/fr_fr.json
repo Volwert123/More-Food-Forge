@@ -1,0 +1,17 @@
+{
+  "item.morefood.cooked_carrot": "Carotte cuite",
+  "item.morefood.carrot_pieces": "Morceaux de carottes",
+  "item.morefood.carrot_soup": "Soupe de carottes",
+  "item.morefood.cooked_apple": "Pomme cuite",
+  "item.morefood.apple_pieces": "Morceaux de pommes",
+  "item.morefood.apple_soup": "Soupe de pommes",
+  "item.morefood.kelp_pieces": "Morceaux de algue",
+  "item.morefood.kelp_soup": "Soupe de algue",
+  "item.morefood.potato_pieces": "Morceaux de pommes de terre",
+  "item.morefood.potato_soup": "Soupe de pommes de terre",
+  "item.morefood.phantom.pieces": "Morceaux de phantom",
+  "item.morefood.phantom_soup": "Soupe de phantom",
+  "item.morefood.pufferfish_pieces": "Morceaux de poisson-globe",
+  "item.morefood.pufferfish_soup" : "Soupe de poisson-globe",
+  "item.morefood.pumpking_soup": "Soupe de citrouille"
+}

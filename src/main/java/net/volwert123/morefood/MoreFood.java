@@ -58,6 +58,11 @@ public class MoreFood
             event.accept(MoreFoodItem.KELP_SOUP);
             event.accept(MoreFoodItem.POTATO_PIECES);
             event.accept(MoreFoodItem.POTATO_SOUP);
+            event.accept(MoreFoodItem.PHANTOM_PIECES);
+            event.accept(MoreFoodItem.PHANTOM_SOUP);
+            event.accept(MoreFoodItem.PUFFERFISH_PIECES);
+            event.accept(MoreFoodItem.PUFFERFISH_SOUP);
+            event.accept(MoreFoodItem.PUMPKING_SOUP);
         }
     }
 
