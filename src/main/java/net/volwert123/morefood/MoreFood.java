@@ -51,18 +51,28 @@ public class MoreFood
             event.accept(MoreFoodItem.COOKED_CARROT);
             event.accept(MoreFoodItem.CARROT_PIECES);
             event.accept(MoreFoodItem.CARROT_SOUP);
+            event.accept(MoreFoodItem.CARROT_BREAD);
+            event.accept(MoreFoodItem.CARROT_PIE);
             event.accept(MoreFoodItem.COOKED_APPLE);
             event.accept(MoreFoodItem.APPLE_PIECES);
             event.accept(MoreFoodItem.APPLE_SOUP);
+            event.accept(MoreFoodItem.APPLE_BREAD);
+            event.accept(MoreFoodItem.APPLE_PIE);
             event.accept(MoreFoodItem.KELP_PIECES);
             event.accept(MoreFoodItem.KELP_SOUP);
             event.accept(MoreFoodItem.POTATO_PIECES);
             event.accept(MoreFoodItem.POTATO_SOUP);
+            event.accept(MoreFoodItem.POTATO_BREAD);
+            event.accept(MoreFoodItem.COOKED_PHANTOM);
             event.accept(MoreFoodItem.PHANTOM_PIECES);
             event.accept(MoreFoodItem.PHANTOM_SOUP);
             event.accept(MoreFoodItem.PUFFERFISH_PIECES);
             event.accept(MoreFoodItem.PUFFERFISH_SOUP);
             event.accept(MoreFoodItem.PUMPKING_SOUP);
+            event.accept(MoreFoodItem.PUMPKING_BREAD);
+            event.accept(MoreFoodItem.COOKED_BAMBOO);
+            event.accept(MoreFoodItem.BAMBOO_PIECES);
+            event.accept(MoreFoodItem.BAMBOO_SOUP);
         }
     }
 

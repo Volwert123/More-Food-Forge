@@ -47,6 +47,13 @@ public class MoreFoodItem {
                 }
             });
 
+    public static final RegistryObject<Item> CARROT_BREAD = ITEMS.register("carrot_bread",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)
+                    .food(new FoodProperties.Builder().nutrition(6).saturationMod(3f).build())));
+
+    public static final RegistryObject<Item> CARROT_PIE = ITEMS.register("carrot_pie",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)
+                    .food(new FoodProperties.Builder().nutrition(10).saturationMod(5f).build())));
 
     public static final RegistryObject<Item> COOKED_APPLE = ITEMS.register("cooked_apple",
             () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)
@@ -74,6 +81,13 @@ public class MoreFoodItem {
                 return stack;
             }});
 
+    public static final RegistryObject<Item> APPLE_BREAD = ITEMS.register("apple_bread",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)
+                    .food(new FoodProperties.Builder().nutrition(6).saturationMod(3f).build())));
+
+    public static final RegistryObject<Item> APPLE_PIE = ITEMS.register("apple_pie",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)
+                    .food(new FoodProperties.Builder().nutrition(10).saturationMod(5f).build())));
 
 
     public static final RegistryObject<Item> KELP_PIECES = ITEMS.register("kelp_pieces",
@@ -122,6 +136,15 @@ public class MoreFoodItem {
                     return stack;
                 }
             });
+
+    public static final RegistryObject<Item> POTATO_BREAD = ITEMS.register("potato_bread",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)
+                    .food(new FoodProperties.Builder().nutrition(6).saturationMod(3f).build())));
+
+    public static final RegistryObject<Item> COOKED_PHANTOM = ITEMS.register("cooked_phantom",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)
+                    .food(new FoodProperties.Builder().nutrition(5).saturationMod(2.5f).build())));
+
 
     public static final RegistryObject<Item> PHANTOM_PIECES = ITEMS.register("phantom_pieces",
             () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
@@ -174,6 +197,38 @@ public class MoreFoodItem {
             });
 
     public static final RegistryObject<Item> PUMPKING_SOUP = ITEMS.register("pumpking_soup",
+            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)
+                    .food(new FoodProperties.Builder().nutrition(6).saturationMod(3f).build())) {
+                @Override
+                public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity livingEntity) {
+                    Player player = livingEntity instanceof Player ? (Player) livingEntity : null;
+                    if (player != null){
+                        player.awardStat(Stats.ITEM_USED.get(this));
+                        player.getFoodData().eat(6, 3f);
+                        if (!player.getAbilities().instabuild) stack.shrink(1);
+                    }
+                    if (player == null || !player.getAbilities().instabuild){
+                        if (stack.isEmpty()) return new ItemStack(Items.BOWL);
+                        if (player != null) player.getInventory().add(new ItemStack(Items.BOWL));
+                    }
+
+                    return stack;
+                }
+            });
+
+    public static final RegistryObject<Item> PUMPKING_BREAD = ITEMS.register("pumpking_bread",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)
+                    .food(new FoodProperties.Builder().nutrition(6).saturationMod(3f).build())));
+
+
+    public static final RegistryObject<Item> COOKED_BAMBOO = ITEMS.register("cooked_bamboo",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)
+                    .food(new FoodProperties.Builder().nutrition(5).saturationMod(2.5f).build())));
+
+    public static final RegistryObject<Item> BAMBOO_PIECES = ITEMS.register("bamboo_pieces",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> BAMBOO_SOUP = ITEMS.register("bamboo_soup",
             () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON)
                     .food(new FoodProperties.Builder().nutrition(6).saturationMod(3f).build())) {
                 @Override

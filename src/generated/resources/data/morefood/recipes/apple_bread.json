@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "morefood:apple_pieces"
+    }
+  ],
+  "result": {
+    "item": "morefood:apple_bread"
+  }
+}

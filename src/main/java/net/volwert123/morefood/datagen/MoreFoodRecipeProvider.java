@@ -46,7 +46,23 @@ public class MoreFoodRecipeProvider extends RecipeProvider implements ICondition
                 .unlockedBy(getHasName(Items.CARROT.asItem()), has(Items.CARROT.asItem()))
                 .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.CARROT_SOUP.get())));
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD,MoreFoodItem.CARROT_BREAD.get())
+                .requires(Items.CARROT.asItem())
+                .requires(Items.WHEAT.asItem())
+                .requires(MoreFoodItem.CARROT_PIECES.get())
+                .unlockedBy(getHasName(Items.CARROT.asItem()), has(Items.CARROT.asItem()))
+                .unlockedBy(getHasName(Items.WHEAT.asItem()), has(Items.WHEAT.asItem()))
+                .unlockedBy(getHasName(MoreFoodItem.CARROT_PIECES.get()), has(MoreFoodItem.CARROT_PIECES.get()))
+                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.CARROT_BREAD.get())));
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD,MoreFoodItem.CARROT_PIE.get())
+                .requires(Items.CARROT.asItem())
+                .requires(Items.EGG.asItem())
+                .requires(Items.SUGAR.asItem())
+                .unlockedBy(getHasName(Items.CARROT.asItem()), has(Items.CARROT.asItem()))
+                .unlockedBy(getHasName(Items.EGG.asItem()), has(Items.EGG.asItem()))
+                .unlockedBy(getHasName(Items.SUGAR.asItem()), has(Items.SUGAR.asItem()))
+                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.CARROT_PIE.get())));
 
         SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.APPLE.asItem()), RecipeCategory.FOOD,MoreFoodItem.COOKED_APPLE.get(),1.0f,200, RecipeSerializer.SMELTING_RECIPE)
                 .unlockedBy(getHasName(Items.APPLE),has(Items.APPLE))
@@ -73,6 +89,24 @@ public class MoreFoodRecipeProvider extends RecipeProvider implements ICondition
                 .unlockedBy(getHasName(MoreFoodItem.APPLE_PIECES.get()), has(MoreFoodItem.APPLE_PIECES.get()))
                 .unlockedBy(getHasName(Items.APPLE.asItem()), has(Items.APPLE.asItem()))
                 .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.APPLE_SOUP.get())));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD,MoreFoodItem.APPLE_BREAD.get())
+                .requires(Items.APPLE.asItem())
+                .requires(Items.WHEAT.asItem())
+                .requires(MoreFoodItem.APPLE_PIECES.get())
+                .unlockedBy(getHasName(Items.APPLE.asItem()), has(Items.APPLE.asItem()))
+                .unlockedBy(getHasName(Items.WHEAT.asItem()), has(Items.WHEAT.asItem()))
+                .unlockedBy(getHasName(MoreFoodItem.APPLE_PIECES.get()), has(MoreFoodItem.APPLE_PIECES.get()))
+                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.APPLE_BREAD.get())));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD,MoreFoodItem.APPLE_PIE.get())
+                .requires(Items.APPLE.asItem())
+                .requires(Items.EGG.asItem())
+                .requires(Items.SUGAR.asItem())
+                .unlockedBy(getHasName(Items.APPLE.asItem()), has(Items.APPLE.asItem()))
+                .unlockedBy(getHasName(Items.EGG.asItem()), has(Items.EGG.asItem()))
+                .unlockedBy(getHasName(Items.SUGAR.asItem()), has(Items.SUGAR.asItem()))
+                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.APPLE_PIE.get())));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,MoreFoodItem.KELP_PIECES.get(),4)
                 .requires(Items.KELP.asItem())
@@ -102,6 +136,28 @@ public class MoreFoodRecipeProvider extends RecipeProvider implements ICondition
                 .unlockedBy(getHasName(MoreFoodItem.POTATO_PIECES.get()), has(MoreFoodItem.POTATO_PIECES.get()))
                 .unlockedBy(getHasName(Items.POTATO.asItem()), has(Items.POTATO.asItem()))
                 .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.POTATO_SOUP.get())));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD,MoreFoodItem.POTATO_BREAD.get())
+                .requires(Items.POTATO.asItem())
+                .requires(Items.WHEAT.asItem())
+                .requires(MoreFoodItem.POTATO_PIECES.get())
+                .unlockedBy(getHasName(Items.POTATO.asItem()), has(Items.POTATO.asItem()))
+                .unlockedBy(getHasName(Items.WHEAT.asItem()), has(Items.WHEAT.asItem()))
+                .unlockedBy(getHasName(MoreFoodItem.POTATO_PIECES.get()), has(MoreFoodItem.POTATO_PIECES.get()))
+                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.POTATO_BREAD.get())));
+
+
+        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.PHANTOM_MEMBRANE.asItem()), RecipeCategory.FOOD,MoreFoodItem.COOKED_PHANTOM.get(),1.0f,200, RecipeSerializer.SMELTING_RECIPE)
+                .unlockedBy(getHasName(Items.PHANTOM_MEMBRANE),has(Items.PHANTOM_MEMBRANE))
+                .save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.COOKED_PHANTOM.get()) + "_smelting"));
+
+        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.PHANTOM_MEMBRANE.asItem()), RecipeCategory.FOOD,MoreFoodItem.COOKED_PHANTOM.get(),1.0f,100, RecipeSerializer.SMOKING_RECIPE)
+                .unlockedBy(getHasName(Items.PHANTOM_MEMBRANE),has(Items.PHANTOM_MEMBRANE))
+                .save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.COOKED_PHANTOM.get()) + "_smoking"));
+
+        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.PHANTOM_MEMBRANE.asItem()), RecipeCategory.FOOD,MoreFoodItem.COOKED_PHANTOM.get(),1.0f,600, RecipeSerializer.CAMPFIRE_COOKING_RECIPE)
+                .unlockedBy(getHasName(Items.PHANTOM_MEMBRANE),has(Items.PHANTOM_MEMBRANE))
+                .save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.COOKED_PHANTOM.get()) + "_campfire_cooking"));
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,MoreFoodItem.PHANTOM_PIECES.get(),4)
@@ -140,6 +196,42 @@ public class MoreFoodRecipeProvider extends RecipeProvider implements ICondition
                 .unlockedBy(getHasName(Items.PUMPKIN_SEEDS.asItem()), has(Items.PUMPKIN_SEEDS.asItem()))
                 .unlockedBy(getHasName(Items.PUMPKIN.asItem()), has(Items.PUMPKIN.asItem()))
                 .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.PUMPKING_SOUP.get())));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD,MoreFoodItem.PUMPKING_BREAD.get())
+                .requires(Items.PUMPKIN.asItem())
+                .requires(Items.WHEAT.asItem())
+                .requires(Items.PUMPKIN_SEEDS.asItem())
+                .unlockedBy(getHasName(Items.PUMPKIN.asItem()), has(Items.PUMPKIN.asItem()))
+                .unlockedBy(getHasName(Items.WHEAT.asItem()), has(Items.WHEAT.asItem()))
+                .unlockedBy(getHasName(Items.PUMPKIN_SEEDS.asItem()), has(Items.PUMPKIN_SEEDS.asItem()))
+                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.PUMPKING_BREAD.get())));
+
+
+        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.BAMBOO.asItem()), RecipeCategory.FOOD,MoreFoodItem.COOKED_BAMBOO.get(),1.0f,200, RecipeSerializer.SMELTING_RECIPE)
+                .unlockedBy(getHasName(Items.BAMBOO),has(Items.BAMBOO))
+                .save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.COOKED_BAMBOO.get()) + "_smelting"));
+
+        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.BAMBOO.asItem()), RecipeCategory.FOOD,MoreFoodItem.COOKED_BAMBOO.get(),1.0f,100, RecipeSerializer.SMOKING_RECIPE)
+                .unlockedBy(getHasName(Items.BAMBOO),has(Items.BAMBOO))
+                .save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.COOKED_BAMBOO.get()) + "_smoking"));
+
+        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.BAMBOO.asItem()), RecipeCategory.FOOD,MoreFoodItem.COOKED_BAMBOO.get(),1.0f,600, RecipeSerializer.CAMPFIRE_COOKING_RECIPE)
+                .unlockedBy(getHasName(Items.BAMBOO),has(Items.BAMBOO))
+                .save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.COOKED_BAMBOO.get()) + "_campfire_cooking"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,MoreFoodItem.BAMBOO_PIECES.get(),4)
+                .requires(Items.BAMBOO.asItem())
+                .unlockedBy(getHasName(Items.BAMBOO.asItem()), has(Items.BAMBOO.asItem()))
+                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.BAMBOO_PIECES.get())));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD,MoreFoodItem.BAMBOO_SOUP.get())
+                .requires(Items.BOWL.asItem())
+                .requires(MoreFoodItem.BAMBOO_PIECES.get())
+                .requires(Items.BAMBOO.asItem())
+                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
+                .unlockedBy(getHasName(MoreFoodItem.BAMBOO_PIECES.get()), has(MoreFoodItem.BAMBOO_PIECES.get()))
+                .unlockedBy(getHasName(Items.BAMBOO.asItem()), has(Items.BAMBOO.asItem()))
+                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.BAMBOO_SOUP.get())));
 
     }
 
