@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "K": {
+      "item": "minecraft:dried_kelp"
+    }
+  },
+  "pattern": [
+    "III",
+    "IKI",
+    "III"
+  ],
+  "result": {
+    "item": "morefood:iron_kelp"
+  },
+  "show_notification": true
+}
