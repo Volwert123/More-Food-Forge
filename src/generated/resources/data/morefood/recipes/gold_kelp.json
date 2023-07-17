@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "K": {
+      "item": "minecraft:dried_kelp"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GKG",
+    "GGG"
+  ],
+  "result": {
+    "item": "morefood:gold_kelp"
+  },
+  "show_notification": true
+}

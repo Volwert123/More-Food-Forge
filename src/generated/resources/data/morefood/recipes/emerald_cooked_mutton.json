@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "M": {
+      "item": "minecraft:cooked_mutton"
+    }
+  },
+  "pattern": [
+    "EEE",
+    "EME",
+    "EEE"
+  ],
+  "result": {
+    "item": "morefood:emerald_cooked_mutton"
+  },
+  "show_notification": true
+}

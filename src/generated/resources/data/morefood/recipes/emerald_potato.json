@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "P": {
+      "item": "minecraft:potato"
+    }
+  },
+  "pattern": [
+    "EEE",
+    "EPE",
+    "EEE"
+  ],
+  "result": {
+    "item": "morefood:emerald_potato"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "R": {
+      "item": "minecraft:cooked_rabbit"
+    }
+  },
+  "pattern": [
+    "EEE",
+    "ERE",
+    "EEE"
+  ],
+  "result": {
+    "item": "morefood:emerald_cooked_rabbit"
+  },
+  "show_notification": true
+}

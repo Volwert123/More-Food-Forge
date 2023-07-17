@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:cooked_beef"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    }
+  },
+  "pattern": [
+    "EEE",
+    "EBE",
+    "EEE"
+  ],
+  "result": {
+    "item": "morefood:emerald_cooked_beef"
+  },
+  "show_notification": true
+}

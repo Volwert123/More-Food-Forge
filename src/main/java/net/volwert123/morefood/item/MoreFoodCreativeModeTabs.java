@@ -12,7 +12,7 @@ public class MoreFoodCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MoreFood.MOD_ID);
 
     public static RegistryObject<CreativeModeTab> MOREFOOD_TAB = CREATIVE_MODE_TABS.register("morefood_tab", () -> CreativeModeTab.builder()
-            .icon(() -> new ItemStack(MoreFoodItem.COOKED_CARROT.get()))
+            .icon(() -> new ItemStack(MoreFoodItems.COOKED_CARROT.get()))
             .title(Component.literal("More Food")).build());
 
     public static void register(IEventBus eventBus){
