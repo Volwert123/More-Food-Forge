@@ -15,7 +15,7 @@
   "item.morefood.potato_soup": "Soupe de pommes de terre",
   "item.morefood.potato_bread": "Pain aux pommes de terre",
   "item.morefood.cooked_phantom": "Phantom cuite",
-  "item.morefood.phantom.pieces": "Morceaux de phantom",
+  "item.morefood.phantom_pieces": "Morceaux de phantom",
   "item.morefood.phantom_soup": "Soupe de phantom",
   "item.morefood.pufferfish_pieces": "Morceaux de poisson-globe",
   "item.morefood.pufferfish_soup": "Soupe de poisson-globe",
@@ -61,6 +61,5 @@
   "item.morefood.iron_cooked_beef": "Boeuf cuit au fer",
   "item.morefood.gold_cooked_beef": "Boeuf cuit à l'or",
   "item.morefood.diamond_cooked_beef": "Boeuf cuit au diamant",
-  "item.morefood.emerald.cooked_beef": "Boeuf cuit à l'émeraude",
-
+  "item.morefood.emerald_cooked_beef": "Boeuf cuit à l'émeraude"
 }

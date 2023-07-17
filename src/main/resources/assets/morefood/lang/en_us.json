@@ -29,7 +29,7 @@
   "item.morefood.potato_soup": "Potato Soup",
   "item.morefood.potato_bread": "Potato Bread",
   "item.morefood.cooked_phantom": "Cooked Phantom",
-  "item.morefood.phantom.pieces": "Phantom Pieces",
+  "item.morefood.phantom_pieces": "Phantom Pieces",
   "item.morefood.phantom_soup": "Phantom Soup",
   "item.morefood.pufferfish_pieces": "Pufferfish Pieces",
   "item.morefood.pufferfish_soup": "Pufferfish Soup",
@@ -61,5 +61,5 @@
   "item.morefood.iron_cooked_beef": "Iron Cooked Beef",
   "item.morefood.gold_cooked_beef": "Gold Cooked Beef",
   "item.morefood.diamond_cooked_beef": "Diamond Cooked Beef",
-  "item.morefood.emerald.cooked_beef": "Emerald Cooked Beef"
+  "item.morefood.emerald_cooked_beef": "Emerald Cooked Beef"
 }

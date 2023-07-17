@@ -342,18 +342,17 @@ public class MoreFoodRecipeProvider extends RecipeProvider implements ICondition
                 .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.PUFFERFISH_PIECES.get())));
 
 
-
-
-
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD,MoreFoodItem.PUMPKING_SOUP.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD,MoreFoodItem.PUFFERFISH_SOUP.get())
                 .requires(Items.BOWL.asItem())
                 .requires(MoreFoodItem.PUFFERFISH_PIECES.get())
                 .requires(Items.PUFFERFISH.asItem())
                 .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
-                .unlockedBy(getHasName(MoreFoodItem.PUFFERFISH_PIECES.get()), has(MoreFoodItem.PUFFERFISH_SOUP.get()))
+                .unlockedBy(getHasName(MoreFoodItem.PUFFERFISH_PIECES.get()), has(MoreFoodItem.PUFFERFISH_PIECES.get()))
                 .unlockedBy(getHasName(Items.PUFFERFISH.asItem()), has(Items.PUFFERFISH.asItem()))
                 .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItem.PUFFERFISH_SOUP.get())));
+
+
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD,MoreFoodItem.PUMPKING_SOUP.get())
                 .requires(Items.BOWL.asItem())
