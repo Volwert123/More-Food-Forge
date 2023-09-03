@@ -16,6 +16,9 @@ public class DataGenerators {
         PackOutput packOutput = generator.getPackOutput();
         ExistingFileHelper fileHelper = event.getExistingFileHelper();
 
+        generator.addProvider(true, new MoreFoodBlockStateProvider(packOutput, fileHelper));
+        generator.addProvider(true, new MoreFoodGlobalLootModifierProvider(packOutput));
+        generator.addProvider(true, MoreFoodLootTableProvider.create(packOutput));
         generator.addProvider(true, new MoreFoodModelProvider(packOutput, fileHelper));
         generator.addProvider(true, new MoreFoodRecipeProvider(packOutput));
     }
