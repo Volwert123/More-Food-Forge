@@ -15,6 +15,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.volwert123.morefood.MoreFood;
+import net.volwert123.morefood.block.MoreFoodBlocks;
 import net.volwert123.morefood.item.custom.PufferfishSoupItem;
 import net.volwert123.morefood.item.custom.SoupItem;
 
@@ -692,6 +693,22 @@ public class MoreFoodItems {
                     return stack;
                 }
             });
+
+
+
+
+    public static final RegistryObject<Item> RICE_CHICKENBOWL = ITEMS.register("rice_chickenbowl", () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food(new FoodProperties.Builder().nutrition(10).saturationMod(5f).build())));
+
+    public static final RegistryObject<Item> RICE_SALMONBOWL = ITEMS.register("rice_salmonbowl", () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food(new FoodProperties.Builder().nutrition(10).saturationMod(5f).build())));
+
+    public static final RegistryObject<Item> RICE_CODBOWL = ITEMS.register("rice_codbowl", () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food(new FoodProperties.Builder().nutrition(10).saturationMod(5f).build())));
+
+    public static final RegistryObject<Item> RICE_VEGETABLEBOWL = ITEMS.register("rice_vegetablebowl", () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food(new FoodProperties.Builder().nutrition(9).saturationMod(4.5f).build())));
+
+
+
+
+    public static final RegistryObject<Item> RICE = ITEMS.register("rice", () -> new ItemNameBlockItem(MoreFoodBlocks.RICE_CROP.get(), new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

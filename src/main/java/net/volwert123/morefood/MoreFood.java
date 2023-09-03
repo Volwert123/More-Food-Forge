@@ -5,6 +5,7 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.volwert123.morefood.block.MoreFoodBlocks;
 import net.volwert123.morefood.item.MoreFoodCreativeModeTabs;
 import net.volwert123.morefood.item.MoreFoodItems;
 
@@ -15,6 +16,8 @@ public class MoreFood {
     public MoreFood() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        MoreFoodBlocks.register(modEventBus);
+        MoreFoodCreativeModeTabs.register(modEventBus);
         MoreFoodItems.register(modEventBus);
         MoreFoodCreativeModeTabs.register(modEventBus);
 
@@ -88,6 +91,11 @@ public class MoreFood {
             event.accept(MoreFoodItems.GOLD_COOKED_BEEF);
             event.accept(MoreFoodItems.DIAMOND_COOKED_BEEF);
             event.accept(MoreFoodItems.EMERALD_COOKED_BEEF);
+            event.accept(MoreFoodItems.RICE);
+            event.accept(MoreFoodItems.RICE_CHICKENBOWL);
+            event.accept(MoreFoodItems.RICE_SALMONBOWL);
+            event.accept(MoreFoodItems.RICE_CODBOWL);
+            event.accept(MoreFoodItems.RICE_VEGETABLEBOWL);
         }
     }
 }

@@ -610,5 +610,66 @@ public class MoreFoodRecipeProvider extends RecipeProvider implements ICondition
                 .unlockedBy(getHasName(Items.COOKED_BEEF.asItem()), has(Items.COOKED_BEEF.asItem()))
                 .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_COOKED_BEEF.get())));
 
+
+
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.RICE_CHICKENBOWL.get())
+                .define('B', Items.BOWL)
+                .define('C', Items.COOKED_CHICKEN)
+                .define('R', MoreFoodItems.RICE.get())
+                .pattern("  C")
+                .pattern("RRR")
+                .pattern(" B ")
+                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
+                .unlockedBy(getHasName(Items.COOKED_CHICKEN.asItem()), has(Items.COOKED_CHICKEN.asItem()))
+                .unlockedBy(getHasName(MoreFoodItems.RICE.get()), has(MoreFoodItems.RICE.get()))
+                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.RICE_CHICKENBOWL.get())));
+
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.RICE_SALMONBOWL.get())
+                .define('B', Items.BOWL)
+                .define('C', Items.COOKED_SALMON)
+                .define('R', MoreFoodItems.RICE.get())
+                .pattern("  C")
+                .pattern("RRR")
+                .pattern(" B ")
+                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
+                .unlockedBy(getHasName(Items.COOKED_SALMON.asItem()), has(Items.COOKED_SALMON.asItem()))
+                .unlockedBy(getHasName(MoreFoodItems.RICE.get()), has(MoreFoodItems.RICE.get()))
+                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.RICE_SALMONBOWL.get())));
+
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.RICE_CODBOWL.get())
+                .define('B', Items.BOWL)
+                .define('C', Items.COOKED_COD)
+                .define('R', MoreFoodItems.RICE.get())
+                .pattern("  C")
+                .pattern("RRR")
+                .pattern(" B ")
+                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
+                .unlockedBy(getHasName(Items.COOKED_COD.asItem()), has(Items.COOKED_COD.asItem()))
+                .unlockedBy(getHasName(MoreFoodItems.RICE.get()), has(MoreFoodItems.RICE.get()))
+                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.RICE_CODBOWL.get())));
+
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.RICE_VEGETABLEBOWL.get())
+                .define('B', Items.BOWL)
+                .define('C', Items.CARROT)
+                .define('B', MoreFoodItems.COOKED_BAMBOO.get())
+                .define('R', MoreFoodItems.RICE.get())
+                .pattern(" BC")
+                .pattern("RRR")
+                .pattern(" B ")
+                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
+                .unlockedBy(getHasName(Items.CARROT.asItem()), has(Items.CARROT.asItem()))
+                .unlockedBy(getHasName(MoreFoodItems.RICE_VEGETABLEBOWL.get()), has(MoreFoodItems.RICE_VEGETABLEBOWL.get()))
+                .unlockedBy(getHasName(MoreFoodItems.RICE.get()), has(MoreFoodItems.RICE.get()))
+                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.RICE_VEGETABLEBOWL.get())));
+
+
     }
 }

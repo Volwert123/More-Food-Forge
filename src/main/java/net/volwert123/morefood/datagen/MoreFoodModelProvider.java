@@ -79,8 +79,13 @@ public class MoreFoodModelProvider extends ItemModelProvider {
         simpleItem(MoreFoodItems.GOLD_COOKED_BEEF);
         simpleItem(MoreFoodItems.DIAMOND_COOKED_BEEF);
         simpleItem(MoreFoodItems.EMERALD_COOKED_BEEF);
-
+        simpleItem(MoreFoodItems.RICE);
+        simpleItem(MoreFoodItems.RICE_CHICKENBOWL);
+        simpleItem(MoreFoodItems.RICE_SALMONBOWL);
+        simpleItem(MoreFoodItems.RICE_CODBOWL);
+        simpleItem(MoreFoodItems.RICE_VEGETABLEBOWL);
     }
+
     private void simpleItem(RegistryObject<Item> item){
         withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
