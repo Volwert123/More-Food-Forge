@@ -61,5 +61,10 @@
   "item.morefood.iron_cooked_beef": "Boeuf cuit au fer",
   "item.morefood.gold_cooked_beef": "Boeuf cuit à l'or",
   "item.morefood.diamond_cooked_beef": "Boeuf cuit au diamant",
-  "item.morefood.emerald_cooked_beef": "Boeuf cuit à l'émeraude"
+  "item.morefood.emerald_cooked_beef": "Boeuf cuit à l'émeraude",
+  "item.morefood.rice": "Rize",
+  "item.morefood.rice_chickenbowl": "Bol de poulet au riz",
+  "item.morefood.rice_codbowl": "Bol de morue au riz",
+  "item.morefood.rice_salmonbowl": "Bol de saumon au riz",
+  "item.morefood.rice_vegetablebowl": "Bol de légumes au riz"
 }

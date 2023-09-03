@@ -62,4 +62,9 @@
   "item.morefood.gold_cooked_beef": "Gold Cooked Beef",
   "item.morefood.diamond_cooked_beef": "Diamond Cooked Beef",
   "item.morefood.emerald_cooked_beef": "Emerald Cooked Beef",
+  "item.morefood.rice":"Rice",
+  "item.morefood.rice_chickenbowl":"Rice Chicken Bowl",
+  "item.morefood.rice_codbowl":"Rice Cod Bowl",
+  "item.morefood.rice_salmonbowl":"Rice Salmon Bowl",
+  "item.morefood.rice_vegetablebowl":"Rice Vegetable Bowl"
 }

@@ -61,5 +61,10 @@
   "item.morefood.iron_cooked_beef": "Говядина, приготовленная в чугуне",
   "item.morefood.gold_cooked_beef": "Говядина, приготовленная золотым способом",
   "item.morefood.diamond_cooked_beef": "Говядина, приготовленная в бриллиантах",
-  "item.morefood.emerald_cooked_beef": "Изумрудная вареная говядина"
+  "item.morefood.emerald_cooked_beef": "Изумрудная вареная говядина",
+  "item.morefood.rice": "Рис",
+  "item.morefood.rice_chickenbowl": "Миска с курицей и рисом",
+  "item.morefood.rice_codbowl": "Миска с рисовой треской",
+  "item.morefood.rice_salmonbowl": "Рисовая миска с лососем",
+  "item.morefood.rice_vegetablebowl": "Овощная миска с рисом"
 }

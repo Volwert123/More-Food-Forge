@@ -61,5 +61,10 @@
   "item.morefood.iron_cooked_beef": "Eisen Rinderfleisch",
   "item.morefood.gold_cooked_beef": "Gold Rinderfleisch",
   "item.morefood.diamond_cooked_beef": "Diamand Rinderfleisch",
-  "item.morefood.emerald_cooked_beef": "Smaragt Rinderfleisch"
+  "item.morefood.emerald_cooked_beef": "Smaragt Rinderfleisch",
+  "item.morefood.rice": "Reis",
+  "item.morefood.rice_chickenbowl": "Hühnchen Reis Schale",
+  "item.morefood.rice_codbowl": "Kabeljau Reis Schale",
+  "item.morefood.rice_salmonbowl": "Lachs Reis Schale",
+  "item.morefood.rice_vegetablebowl": "Gemüse Reis Schale"
 }
