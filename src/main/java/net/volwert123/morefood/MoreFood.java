@@ -8,6 +8,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.volwert123.morefood.block.MoreFoodBlocks;
 import net.volwert123.morefood.item.MoreFoodCreativeModeTabs;
 import net.volwert123.morefood.item.MoreFoodItems;
+import net.volwert123.morefood.loot.MoreFoodLootModifiers;
 
 @Mod(MoreFood.MOD_ID)
 public class MoreFood {
@@ -19,7 +20,7 @@ public class MoreFood {
         MoreFoodBlocks.register(modEventBus);
         MoreFoodCreativeModeTabs.register(modEventBus);
         MoreFoodItems.register(modEventBus);
-        MoreFoodCreativeModeTabs.register(modEventBus);
+        MoreFoodLootModifiers.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
