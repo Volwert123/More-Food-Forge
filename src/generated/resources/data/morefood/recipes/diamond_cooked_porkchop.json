@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "minecraft:cooked_porkchop"
+    },
     "D": {
       "item": "minecraft:diamond"
-    },
-    "P": {
-      "item": "minecraft:cooked_porkchop"
     }
   },
   "pattern": [
     "DDD",
-    "DPD",
+    "D#D",
     "DDD"
   ],
   "result": {

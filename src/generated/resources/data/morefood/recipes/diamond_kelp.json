@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "minecraft:dried_kelp"
+    },
     "D": {
       "item": "minecraft:diamond"
-    },
-    "K": {
-      "item": "minecraft:dried_kelp"
     }
   },
   "pattern": [
     "DDD",
-    "DKD",
+    "D#D",
     "DDD"
   ],
   "result": {

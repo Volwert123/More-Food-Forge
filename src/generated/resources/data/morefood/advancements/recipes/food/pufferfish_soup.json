@@ -47,8 +47,8 @@
   "requirements": [
     [
       "has_bowl",
-      "has_pufferfish_pieces",
       "has_pufferfish",
+      "has_pufferfish_pieces",
       "has_the_recipe"
     ]
   ],

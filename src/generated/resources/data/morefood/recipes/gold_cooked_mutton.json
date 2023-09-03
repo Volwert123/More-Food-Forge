@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "minecraft:cooked_mutton"
+    },
     "G": {
       "item": "minecraft:gold_ingot"
-    },
-    "M": {
-      "item": "minecraft:cooked_mutton"
     }
   },
   "pattern": [
     "GGG",
-    "GMG",
+    "G#G",
     "GGG"
   ],
   "result": {

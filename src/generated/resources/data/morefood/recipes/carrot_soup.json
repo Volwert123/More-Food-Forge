@@ -6,10 +6,10 @@
       "item": "minecraft:bowl"
     },
     {
-      "item": "morefood:carrot_pieces"
+      "item": "minecraft:carrot"
     },
     {
-      "item": "minecraft:carrot"
+      "item": "morefood:carrot_pieces"
     }
   ],
   "result": {

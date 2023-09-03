@@ -47,8 +47,8 @@
   "requirements": [
     [
       "has_bowl",
-      "has_cooked_salmon",
       "has_rice",
+      "has_cooked_salmon",
       "has_the_recipe"
     ]
   ],

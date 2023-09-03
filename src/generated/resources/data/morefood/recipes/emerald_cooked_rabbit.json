@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "minecraft:cooked_rabbit"
+    },
     "E": {
       "item": "minecraft:emerald"
-    },
-    "R": {
-      "item": "minecraft:cooked_rabbit"
     }
   },
   "pattern": [
     "EEE",
-    "ERE",
+    "E#E",
     "EEE"
   ],
   "result": {

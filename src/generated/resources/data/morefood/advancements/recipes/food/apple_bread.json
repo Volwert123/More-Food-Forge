@@ -46,8 +46,8 @@
   },
   "requirements": [
     [
-      "has_apple",
       "has_wheat",
+      "has_apple",
       "has_apple_pieces",
       "has_the_recipe"
     ]

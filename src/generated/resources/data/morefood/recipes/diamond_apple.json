@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "A": {
+    "#": {
       "item": "minecraft:apple"
     },
     "D": {
@@ -11,7 +11,7 @@
   },
   "pattern": [
     "DDD",
-    "DAD",
+    "D#D",
     "DDD"
   ],
   "result": {

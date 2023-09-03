@@ -46,8 +46,8 @@
   },
   "requirements": [
     [
-      "has_pumpkin",
       "has_wheat",
+      "has_pumpkin",
       "has_pumpkin_seeds",
       "has_the_recipe"
     ]

@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "minecraft:cooked_mutton"
+    },
     "D": {
       "item": "minecraft:diamond"
-    },
-    "M": {
-      "item": "minecraft:cooked_mutton"
     }
   },
   "pattern": [
     "DDD",
-    "DMD",
+    "D#D",
     "DDD"
   ],
   "result": {

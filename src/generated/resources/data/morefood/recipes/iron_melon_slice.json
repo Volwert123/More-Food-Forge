@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "minecraft:melon_slice"
+    },
     "I": {
       "item": "minecraft:iron_ingot"
-    },
-    "M": {
-      "item": "minecraft:melon_slice"
     }
   },
   "pattern": [
     "III",
-    "IMI",
+    "I#I",
     "III"
   ],
   "result": {

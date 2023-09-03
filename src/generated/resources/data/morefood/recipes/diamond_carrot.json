@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "C": {
+    "#": {
       "item": "minecraft:carrot"
     },
     "D": {
@@ -11,7 +11,7 @@
   },
   "pattern": [
     "DDD",
-    "DCD",
+    "D#D",
     "DDD"
   ],
   "result": {

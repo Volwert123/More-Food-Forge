@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "minecraft:cooked_porkchop"
+    },
     "G": {
       "item": "minecraft:gold_ingot"
-    },
-    "P": {
-      "item": "minecraft:cooked_porkchop"
     }
   },
   "pattern": [
     "GGG",
-    "GPG",
+    "G#G",
     "GGG"
   ],
   "result": {

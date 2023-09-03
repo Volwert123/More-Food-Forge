@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": {
+    "#": {
       "item": "minecraft:cooked_beef"
     },
     "E": {
@@ -11,7 +11,7 @@
   },
   "pattern": [
     "EEE",
-    "EBE",
+    "E#E",
     "EEE"
   ],
   "result": {

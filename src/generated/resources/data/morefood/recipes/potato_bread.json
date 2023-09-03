@@ -3,10 +3,10 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "minecraft:potato"
+      "item": "minecraft:wheat"
     },
     {
-      "item": "minecraft:wheat"
+      "item": "minecraft:potato"
     },
     {
       "item": "morefood:potato_pieces"

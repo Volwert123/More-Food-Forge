@@ -6,10 +6,10 @@
       "item": "minecraft:bowl"
     },
     {
-      "item": "morefood:pufferfish_pieces"
+      "item": "minecraft:pufferfish"
     },
     {
-      "item": "minecraft:pufferfish"
+      "item": "morefood:pufferfish_pieces"
     }
   ],
   "result": {

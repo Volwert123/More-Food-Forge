@@ -6,10 +6,10 @@
       "item": "minecraft:bowl"
     },
     {
-      "item": "morefood:kelp_pieces"
+      "item": "minecraft:kelp"
     },
     {
-      "item": "minecraft:kelp"
+      "item": "morefood:kelp_pieces"
     }
   ],
   "result": {

@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "minecraft:melon_slice"
+    },
     "D": {
       "item": "minecraft:diamond"
-    },
-    "M": {
-      "item": "minecraft:melon_slice"
     }
   },
   "pattern": [
     "DDD",
-    "DMD",
+    "D#D",
     "DDD"
   ],
   "result": {

@@ -47,8 +47,8 @@
   "requirements": [
     [
       "has_bowl",
-      "has_bamboo_pieces",
       "has_bamboo",
+      "has_bamboo_pieces",
       "has_the_recipe"
     ]
   ],

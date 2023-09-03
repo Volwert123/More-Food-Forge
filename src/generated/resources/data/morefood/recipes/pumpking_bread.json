@@ -3,10 +3,10 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "minecraft:pumpkin"
+      "item": "minecraft:wheat"
     },
     {
-      "item": "minecraft:wheat"
+      "item": "minecraft:pumpkin"
     },
     {
       "item": "minecraft:pumpkin_seeds"

@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "minecraft:dried_kelp"
+    },
     "G": {
       "item": "minecraft:gold_ingot"
-    },
-    "K": {
-      "item": "minecraft:dried_kelp"
     }
   },
   "pattern": [
     "GGG",
-    "GKG",
+    "G#G",
     "GGG"
   ],
   "result": {

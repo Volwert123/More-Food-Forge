@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "minecraft:melon_slice"
+    },
     "G": {
       "item": "minecraft:gold_ingot"
-    },
-    "M": {
-      "item": "minecraft:melon_slice"
     }
   },
   "pattern": [
     "GGG",
-    "GMG",
+    "G#G",
     "GGG"
   ],
   "result": {

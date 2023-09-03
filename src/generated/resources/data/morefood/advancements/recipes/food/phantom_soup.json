@@ -47,8 +47,8 @@
   "requirements": [
     [
       "has_bowl",
-      "has_phantom_pieces",
       "has_phantom_membrane",
+      "has_phantom_pieces",
       "has_the_recipe"
     ]
   ],

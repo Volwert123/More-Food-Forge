@@ -6,10 +6,10 @@
       "item": "minecraft:bowl"
     },
     {
-      "item": "morefood:phantom_pieces"
+      "item": "minecraft:phantom_membrane"
     },
     {
-      "item": "minecraft:phantom_membrane"
+      "item": "morefood:phantom_pieces"
     }
   ],
   "result": {

@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "minecraft:cooked_rabbit"
+    },
     "G": {
       "item": "minecraft:gold_ingot"
-    },
-    "R": {
-      "item": "minecraft:cooked_rabbit"
     }
   },
   "pattern": [
     "GGG",
-    "GRG",
+    "G#G",
     "GGG"
   ],
   "result": {

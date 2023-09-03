@@ -46,8 +46,8 @@
   },
   "requirements": [
     [
-      "has_carrot",
       "has_wheat",
+      "has_carrot",
       "has_carrot_pieces",
       "has_the_recipe"
     ]

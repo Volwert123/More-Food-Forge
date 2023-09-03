@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "minecraft:potato"
+    },
     "E": {
       "item": "minecraft:emerald"
-    },
-    "P": {
-      "item": "minecraft:potato"
     }
   },
   "pattern": [
     "EEE",
-    "EPE",
+    "E#E",
     "EEE"
   ],
   "result": {

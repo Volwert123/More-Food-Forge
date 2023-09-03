@@ -46,8 +46,8 @@
   },
   "requirements": [
     [
-      "has_potato",
       "has_wheat",
+      "has_potato",
       "has_potato_pieces",
       "has_the_recipe"
     ]

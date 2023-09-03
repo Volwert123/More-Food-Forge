@@ -3,10 +3,10 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "minecraft:carrot"
+      "item": "minecraft:wheat"
     },
     {
-      "item": "minecraft:wheat"
+      "item": "minecraft:carrot"
     },
     {
       "item": "morefood:carrot_pieces"

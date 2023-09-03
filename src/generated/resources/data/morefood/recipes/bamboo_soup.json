@@ -6,10 +6,10 @@
       "item": "minecraft:bowl"
     },
     {
-      "item": "morefood:bamboo_pieces"
+      "item": "minecraft:bamboo"
     },
     {
-      "item": "minecraft:bamboo"
+      "item": "morefood:bamboo_pieces"
     }
   ],
   "result": {

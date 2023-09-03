@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "minecraft:cooked_rabbit"
+    },
     "D": {
       "item": "minecraft:diamond"
-    },
-    "R": {
-      "item": "minecraft:cooked_rabbit"
     }
   },
   "pattern": [
     "DDD",
-    "DRD",
+    "D#D",
     "DDD"
   ],
   "result": {

@@ -25,24 +25,24 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_rice": {
+    "has_cooked_bamboo": {
       "conditions": {
         "items": [
           {
             "items": [
-              "morefood:rice"
+              "morefood:cooked_bamboo"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_rice_vegetablebowl": {
+    "has_rice": {
       "conditions": {
         "items": [
           {
             "items": [
-              "morefood:rice_vegetablebowl"
+              "morefood:rice"
             ]
           }
         ]
@@ -59,9 +59,9 @@
   "requirements": [
     [
       "has_bowl",
-      "has_carrot",
-      "has_rice_vegetablebowl",
       "has_rice",
+      "has_cooked_bamboo",
+      "has_carrot",
       "has_the_recipe"
     ]
   ],

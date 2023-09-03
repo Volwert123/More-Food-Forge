@@ -47,8 +47,8 @@
   "requirements": [
     [
       "has_bowl",
-      "has_carrot_pieces",
       "has_carrot",
+      "has_carrot_pieces",
       "has_the_recipe"
     ]
   ],

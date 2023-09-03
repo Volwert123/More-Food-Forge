@@ -6,10 +6,10 @@
       "item": "minecraft:bowl"
     },
     {
-      "item": "morefood:apple_pieces"
+      "item": "minecraft:apple"
     },
     {
-      "item": "minecraft:apple"
+      "item": "morefood:apple_pieces"
     }
   ],
   "result": {

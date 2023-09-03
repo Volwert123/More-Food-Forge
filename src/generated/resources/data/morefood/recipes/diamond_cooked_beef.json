@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": {
+    "#": {
       "item": "minecraft:cooked_beef"
     },
     "D": {
@@ -11,7 +11,7 @@
   },
   "pattern": [
     "DDD",
-    "DBD",
+    "D#D",
     "DDD"
   ],
   "result": {

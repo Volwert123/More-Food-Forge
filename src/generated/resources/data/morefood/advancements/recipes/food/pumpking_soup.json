@@ -47,8 +47,8 @@
   "requirements": [
     [
       "has_bowl",
-      "has_pumpkin_seeds",
       "has_pumpkin",
+      "has_pumpkin_seeds",
       "has_the_recipe"
     ]
   ],

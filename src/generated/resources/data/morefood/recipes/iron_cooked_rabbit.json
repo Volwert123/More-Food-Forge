@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "minecraft:cooked_rabbit"
+    },
     "I": {
       "item": "minecraft:iron_ingot"
-    },
-    "R": {
-      "item": "minecraft:cooked_rabbit"
     }
   },
   "pattern": [
     "III",
-    "IRI",
+    "I#I",
     "III"
   ],
   "result": {

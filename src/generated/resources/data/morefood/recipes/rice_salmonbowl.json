@@ -2,18 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "minecraft:cooked_salmon"
+    },
     "B": {
       "item": "minecraft:bowl"
-    },
-    "C": {
-      "item": "minecraft:cooked_salmon"
     },
     "R": {
       "item": "morefood:rice"
     }
   },
   "pattern": [
-    "  C",
+    "  #",
     "RRR",
     " B "
   ],
