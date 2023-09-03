@@ -8,17 +8,17 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 
-public class SoupItem extends Item {
-    public SoupItem(Properties properties) {
+public class RiceBowlItem extends Item {
+    public RiceBowlItem(Properties properties) {
         super(properties.stacksTo(1));
     }
 
     @Override
-    public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity livingEntity) {
-        Player player = livingEntity instanceof Player ? (Player) livingEntity : null;
+    public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity user) {
+        Player player = user instanceof Player ? (Player) user : null;
         if (player != null){
             player.awardStat(Stats.ITEM_USED.get(this));
-            player.getFoodData().eat(6, 3f);
+            player.getFoodData().eat(stack.getFoodProperties(user).getNutrition(), stack.getFoodProperties(user).getSaturationModifier());
             if (!player.getAbilities().instabuild) stack.shrink(1);
         }
         if (player == null || !player.getAbilities().instabuild) {

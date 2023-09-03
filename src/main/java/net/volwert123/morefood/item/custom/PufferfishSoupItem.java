@@ -14,7 +14,7 @@ import net.minecraft.world.level.Level;
 
 public class PufferfishSoupItem extends Item {
     public PufferfishSoupItem(Properties properties) {
-        super(properties);
+        super(properties.stacksTo(1));
     }
 
     @Override
@@ -23,16 +23,15 @@ public class PufferfishSoupItem extends Item {
         if (player instanceof ServerPlayer) CriteriaTriggers.CONSUME_ITEM.trigger((ServerPlayer) player,stack);
         if (!level.isClientSide) livingEntity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 600));
         if (!level.isClientSide) livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 700));
-        if (player != null){
+        if (player != null) {
             player.awardStat(Stats.ITEM_USED.get(this));
             player.getFoodData().eat(6, 3f);
             if (!player.getAbilities().instabuild) stack.shrink(1);
         }
-        if (player == null || !player.getAbilities().instabuild){
+        if (player == null || !player.getAbilities().instabuild) {
             if (stack.isEmpty()) return new ItemStack(Items.BOWL);
             if (player != null) player.getInventory().add(new ItemStack(Items.BOWL));
         }
-
         return stack;
     }
 }

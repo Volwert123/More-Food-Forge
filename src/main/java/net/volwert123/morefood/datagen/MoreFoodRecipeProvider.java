@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.volwert123.morefood.MoreFood;
 import net.volwert123.morefood.item.MoreFoodItems;
@@ -20,656 +21,214 @@ public class MoreFoodRecipeProvider extends RecipeProvider implements ICondition
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+        createIronFoodRecipe(MoreFoodItems.IRON_CARROT.get(), Items.CARROT).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_CARROT.get())));
+        createDiamondFoodRecipe(MoreFoodItems.DIAMOND_CARROT.get(), Items.CARROT).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_CARROT.get())));
+        createEmeraldFoodRecipe(MoreFoodItems.EMERALD_CARROT.get(), Items.CARROT).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_CARROT.get())));
+        createSmeltingRecipe(MoreFoodItems.COOKED_CARROT.get(), Items.CARROT).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_CARROT.get()) + "_smelting"));
+        createSmokingRecipe(MoreFoodItems.COOKED_CARROT.get(), Items.CARROT).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_CARROT.get()) + "_smoking"));
+        createCampfireCookingRecipe(MoreFoodItems.COOKED_CARROT.get(), Items.CARROT).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_CARROT.get()) + "_campfire_cooking"));
+        createPiecesRecipe(MoreFoodItems.CARROT_PIECES.get(), Items.CARROT).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.CARROT_PIECES.get())));
+        createSoupRecipe(MoreFoodItems.CARROT_SOUP.get(), Items.CARROT, MoreFoodItems.CARROT_PIECES.get()).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.CARROT_SOUP.get())));
+        createBreadRecipe(MoreFoodItems.CARROT_BREAD.get(), Items.CARROT, MoreFoodItems.CARROT_PIECES.get()).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.CARROT_BREAD.get())));
+        createPieRecipe(MoreFoodItems.CARROT_PIE.get(), Items.CARROT).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.CARROT_PIE.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.IRON_CARROT.get())
+        createIronFoodRecipe(MoreFoodItems.IRON_APPLE.get(), Items.APPLE).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_APPLE.get())));
+        createDiamondFoodRecipe(MoreFoodItems.DIAMOND_APPLE.get(), Items.APPLE).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_APPLE.get())));
+        createEmeraldFoodRecipe(MoreFoodItems.EMERALD_APPLE.get(), Items.APPLE).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_APPLE.get())));
+        createSmeltingRecipe(MoreFoodItems.COOKED_APPLE.get(), Items.APPLE).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_APPLE.get()) + "_smelting"));
+        createSmokingRecipe(MoreFoodItems.COOKED_APPLE.get(), Items.APPLE).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_APPLE.get()) + "_smoking"));
+        createCampfireCookingRecipe(MoreFoodItems.COOKED_APPLE.get(), Items.APPLE).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_APPLE.get()) + "_campfire_cooking"));
+        createPiecesRecipe(MoreFoodItems.APPLE_PIECES.get(), Items.APPLE).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.APPLE_PIECES.get())));
+        createSoupRecipe(MoreFoodItems.APPLE_SOUP.get(), Items.APPLE, MoreFoodItems.APPLE_PIECES.get()).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.APPLE_SOUP.get())));
+        createBreadRecipe(MoreFoodItems.APPLE_BREAD.get(), Items.APPLE, MoreFoodItems.APPLE_PIECES.get()).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.APPLE_BREAD.get())));
+        createPieRecipe(MoreFoodItems.APPLE_PIE.get(), Items.APPLE).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.APPLE_PIE.get())));
+
+        createIronFoodRecipe(MoreFoodItems.IRON_KELP.get(), Items.DRIED_KELP).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_KELP.get())));
+        createGoldenFoodRecipe(MoreFoodItems.GOLD_KELP.get(), Items.DRIED_KELP).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.GOLD_KELP.get())));
+        createDiamondFoodRecipe(MoreFoodItems.DIAMOND_KELP.get(), Items.DRIED_KELP).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_KELP.get())));
+        createEmeraldFoodRecipe(MoreFoodItems.EMERALD_KELP.get(), Items.DRIED_KELP).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_KELP.get())));
+        createPiecesRecipe(MoreFoodItems.KELP_PIECES.get(), Items.KELP).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.KELP_PIECES.get())));
+        createSoupRecipe(MoreFoodItems.KELP_SOUP.get(), Items.KELP, MoreFoodItems.KELP_PIECES.get()).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.KELP_SOUP.get())));
+
+        createIronFoodRecipe(MoreFoodItems.IRON_POTATO.get(), Items.POTATO).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_POTATO.get())));
+        createGoldenFoodRecipe(MoreFoodItems.GOLD_POTATO.get(), Items.POTATO).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.GOLD_POTATO.get())));
+        createDiamondFoodRecipe(MoreFoodItems.DIAMOND_POTATO.get(), Items.POTATO).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_POTATO.get())));
+        createEmeraldFoodRecipe(MoreFoodItems.EMERALD_POTATO.get(), Items.POTATO).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_POTATO.get())));
+        createPiecesRecipe(MoreFoodItems.POTATO_PIECES.get(), Items.POTATO).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.POTATO_PIECES.get())));
+        createSoupRecipe(MoreFoodItems.POTATO_SOUP.get(), Items.POTATO, MoreFoodItems.POTATO_PIECES.get()).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.POTATO_SOUP.get())));
+        createBreadRecipe(MoreFoodItems.POTATO_BREAD.get(), Items.POTATO, MoreFoodItems.POTATO_PIECES.get()).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.POTATO_BREAD.get())));
+
+        createSmeltingRecipe(MoreFoodItems.COOKED_PHANTOM.get(), Items.PHANTOM_MEMBRANE).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_PHANTOM.get()) + "_smelting"));
+        createSmokingRecipe(MoreFoodItems.COOKED_PHANTOM.get(), Items.PHANTOM_MEMBRANE).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_PHANTOM.get()) + "_smoking"));
+        createCampfireCookingRecipe(MoreFoodItems.COOKED_PHANTOM.get(), Items.PHANTOM_MEMBRANE).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_PHANTOM.get()) + "_campfire_cooking"));
+        createPiecesRecipe(MoreFoodItems.PHANTOM_PIECES.get(), Items.PHANTOM_MEMBRANE).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.PHANTOM_PIECES.get())));
+        createSoupRecipe(MoreFoodItems.PHANTOM_SOUP.get(), Items.PHANTOM_MEMBRANE, MoreFoodItems.PHANTOM_PIECES.get()).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.PHANTOM_SOUP.get())));
+
+        createPiecesRecipe(MoreFoodItems.PUFFERFISH_PIECES.get(), Items.PUFFERFISH).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.PUFFERFISH_PIECES.get())));
+        createSoupRecipe(MoreFoodItems.PUFFERFISH_SOUP.get(), Items.PUFFERFISH, MoreFoodItems.PUFFERFISH_PIECES.get()).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.PUFFERFISH_SOUP.get())));
+
+        createSoupRecipe(MoreFoodItems.PUMPKING_SOUP.get(), Items.PUMPKIN, Items.PUMPKIN_SEEDS).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.PUMPKING_SOUP.get())));
+        createBreadRecipe(MoreFoodItems.PUMPKING_BREAD.get(), Items.PUMPKIN, Items.PUMPKIN_SEEDS).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.PUMPKING_BREAD.get())));
+
+        createSmeltingRecipe(MoreFoodItems.COOKED_BAMBOO.get(), Items.BAMBOO).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_BAMBOO.get()) + "_smelting"));
+        createSmokingRecipe(MoreFoodItems.COOKED_BAMBOO.get(), Items.BAMBOO).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_BAMBOO.get()) + "_smoking"));
+        createCampfireCookingRecipe(MoreFoodItems.COOKED_BAMBOO.get(), Items.BAMBOO).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_BAMBOO.get()) + "_campfire_cooking"));
+        createPiecesRecipe(MoreFoodItems.BAMBOO_PIECES.get(), Items.BAMBOO).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.BAMBOO_PIECES.get())));
+        createSoupRecipe(MoreFoodItems.BAMBOO_SOUP.get(), Items.BAMBOO, MoreFoodItems.BAMBOO_PIECES.get()).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.BAMBOO_SOUP.get())));
+
+        createIronFoodRecipe(MoreFoodItems.IRON_COOKED_RABBIT.get(), Items.COOKED_RABBIT).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_COOKED_RABBIT.get())));
+        createGoldenFoodRecipe(MoreFoodItems.GOLD_COOKED_RABBIT.get(), Items.COOKED_RABBIT).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.GOLD_COOKED_RABBIT.get())));
+        createDiamondFoodRecipe(MoreFoodItems.DIAMOND_COOKED_RABBIT.get(), Items.COOKED_RABBIT).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_COOKED_RABBIT.get())));
+        createEmeraldFoodRecipe(MoreFoodItems.EMERALD_COOKED_RABBIT.get(), Items.COOKED_RABBIT).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_COOKED_RABBIT.get())));
+
+        createIronFoodRecipe(MoreFoodItems.IRON_MELON_SLICE.get(), Items.MELON_SLICE).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_MELON_SLICE.get())));
+        createGoldenFoodRecipe(MoreFoodItems.GOLD_MELON_SLICE.get(), Items.MELON_SLICE).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.GOLD_MELON_SLICE.get())));
+        createDiamondFoodRecipe(MoreFoodItems.DIAMOND_MELON_SLICE.get(), Items.MELON_SLICE).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_MELON_SLICE.get())));
+        createEmeraldFoodRecipe(MoreFoodItems.EMERALD_MELON_SLICE.get(), Items.MELON_SLICE).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_MELON_SLICE.get())));
+
+        createIronFoodRecipe(MoreFoodItems.IRON_COOKED_CHICKEN.get(), Items.COOKED_CHICKEN).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_COOKED_CHICKEN.get())));
+        createGoldenFoodRecipe(MoreFoodItems.GOLD_COOKED_CHICKEN.get(), Items.COOKED_CHICKEN).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.GOLD_COOKED_CHICKEN.get())));
+        createDiamondFoodRecipe(MoreFoodItems.DIAMOND_COOKED_CHICKEN.get(), Items.COOKED_CHICKEN).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_COOKED_CHICKEN.get())));
+        createEmeraldFoodRecipe(MoreFoodItems.EMERALD_COOKED_CHICKEN.get(), Items.COOKED_CHICKEN).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_COOKED_CHICKEN.get())));
+
+        createIronFoodRecipe(MoreFoodItems.IRON_COOKED_MUTTON.get(), Items.COOKED_MUTTON).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_COOKED_MUTTON.get())));
+        createGoldenFoodRecipe(MoreFoodItems.GOLD_COOKED_MUTTON.get(), Items.COOKED_MUTTON).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.GOLD_COOKED_MUTTON.get())));
+        createDiamondFoodRecipe(MoreFoodItems.DIAMOND_COOKED_MUTTON.get(), Items.COOKED_MUTTON).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_COOKED_MUTTON.get())));
+        createEmeraldFoodRecipe(MoreFoodItems.EMERALD_COOKED_MUTTON.get(), Items.COOKED_MUTTON).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_COOKED_MUTTON.get())));
+
+        createIronFoodRecipe(MoreFoodItems.IRON_COOKED_PORKCHOP.get(), Items.COOKED_PORKCHOP).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_COOKED_PORKCHOP.get())));
+        createGoldenFoodRecipe(MoreFoodItems.GOLD_COOKED_PORKCHOP.get(), Items.COOKED_PORKCHOP).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.GOLD_COOKED_PORKCHOP.get())));
+        createDiamondFoodRecipe(MoreFoodItems.DIAMOND_COOKED_PORKCHOP.get(), Items.COOKED_PORKCHOP).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_COOKED_PORKCHOP.get())));
+        createEmeraldFoodRecipe(MoreFoodItems.EMERALD_COOKED_PORKCHOP.get(), Items.COOKED_PORKCHOP).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_COOKED_PORKCHOP.get())));
+
+        createIronFoodRecipe(MoreFoodItems.IRON_COOKED_BEEF.get(), Items.COOKED_BEEF).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_COOKED_BEEF.get())));
+        createGoldenFoodRecipe(MoreFoodItems.GOLD_COOKED_BEEF.get(), Items.COOKED_BEEF).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.GOLD_COOKED_BEEF.get())));
+        createDiamondFoodRecipe(MoreFoodItems.DIAMOND_COOKED_BEEF.get(), Items.COOKED_BEEF).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_COOKED_BEEF.get())));
+        createEmeraldFoodRecipe(MoreFoodItems.EMERALD_COOKED_BEEF.get(), Items.COOKED_BEEF).save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_COOKED_BEEF.get())));
+
+        createRiceBowlRecipe(MoreFoodItems.RICE_CHICKENBOWL.get(), Items.COOKED_CHICKEN).save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.RICE_CHICKENBOWL.get())));
+        createRiceBowlRecipe(MoreFoodItems.RICE_SALMONBOWL.get(), Items.COOKED_SALMON).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.RICE_SALMONBOWL.get())));
+        createRiceBowlRecipe(MoreFoodItems.RICE_CODBOWL.get(), Items.COOKED_COD).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.RICE_CODBOWL.get())));
+        createRiceVegetableBowlRecipe().save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.RICE_VEGETABLEBOWL.get())));
+    }
+
+    private static ShapedRecipeBuilder createIronFoodRecipe(ItemLike output, ItemLike input) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, output)
                 .define('I', Items.IRON_INGOT)
-                .define('C', Items.CARROT)
+                .define('#', input)
                 .pattern("III")
-                .pattern("ICI")
+                .pattern("I#I")
                 .pattern("III")
-                .unlockedBy(getHasName(Items.IRON_INGOT.asItem()), has(Items.IRON_INGOT.asItem()))
-                .unlockedBy(getHasName(Items.CARROT.asItem()), has(Items.CARROT.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_CARROT.get())));
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .unlockedBy(getHasName(input), has(input));
+    }
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.DIAMOND_CARROT.get())
-                .define('D', Items.DIAMOND)
-                .define('C', Items.CARROT)
-                .pattern("DDD")
-                .pattern("DCD")
-                .pattern("DDD")
-                .unlockedBy(getHasName(Items.DIAMOND.asItem()), has(Items.DIAMOND.asItem()))
-                .unlockedBy(getHasName(Items.CARROT.asItem()), has(Items.CARROT.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_CARROT.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.EMERALD_CARROT.get())
-                .define('E', Items.EMERALD)
-                .define('C', Items.CARROT)
-                .pattern("EEE")
-                .pattern("ECE")
-                .pattern("EEE")
-                .unlockedBy(getHasName(Items.EMERALD.asItem()), has(Items.EMERALD.asItem()))
-                .unlockedBy(getHasName(Items.CARROT.asItem()), has(Items.CARROT.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_CARROT.get())));
-
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.CARROT.asItem()), RecipeCategory.FOOD, MoreFoodItems.COOKED_CARROT.get(),1.0f,200, RecipeSerializer.SMELTING_RECIPE)
-                .unlockedBy(getHasName(Items.CARROT),has(Items.CARROT))
-                .save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_CARROT.get()) + "_smelting"));
-
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.CARROT.asItem()), RecipeCategory.FOOD, MoreFoodItems.COOKED_CARROT.get(),1.0f,100, RecipeSerializer.SMOKING_RECIPE)
-                .unlockedBy(getHasName(Items.CARROT),has(Items.CARROT))
-                .save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_CARROT.get()) + "_smoking"));
-
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.CARROT.asItem()), RecipeCategory.FOOD, MoreFoodItems.COOKED_CARROT.get(),1.0f,600, RecipeSerializer.CAMPFIRE_COOKING_RECIPE)
-                .unlockedBy(getHasName(Items.CARROT),has(Items.CARROT))
-                .save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_CARROT.get()) + "_campfire_cooking"));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MoreFoodItems.CARROT_PIECES.get(),4)
-                .requires(Items.CARROT.asItem())
-                .unlockedBy(getHasName(Items.CARROT.asItem()), has(Items.CARROT.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.CARROT_PIECES.get())));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, MoreFoodItems.CARROT_SOUP.get())
-                .requires(Items.BOWL.asItem())
-                .requires(MoreFoodItems.CARROT_PIECES.get())
-                .requires(Items.CARROT.asItem())
-                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
-                .unlockedBy(getHasName(MoreFoodItems.CARROT_PIECES.get()), has(MoreFoodItems.CARROT_PIECES.get()))
-                .unlockedBy(getHasName(Items.CARROT.asItem()), has(Items.CARROT.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.CARROT_SOUP.get())));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, MoreFoodItems.CARROT_BREAD.get())
-                .requires(Items.CARROT.asItem())
-                .requires(Items.WHEAT.asItem())
-                .requires(MoreFoodItems.CARROT_PIECES.get())
-                .unlockedBy(getHasName(Items.CARROT.asItem()), has(Items.CARROT.asItem()))
-                .unlockedBy(getHasName(Items.WHEAT.asItem()), has(Items.WHEAT.asItem()))
-                .unlockedBy(getHasName(MoreFoodItems.CARROT_PIECES.get()), has(MoreFoodItems.CARROT_PIECES.get()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.CARROT_BREAD.get())));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, MoreFoodItems.CARROT_PIE.get())
-                .requires(Items.CARROT.asItem())
-                .requires(Items.EGG.asItem())
-                .requires(Items.SUGAR.asItem())
-                .unlockedBy(getHasName(Items.CARROT.asItem()), has(Items.CARROT.asItem()))
-                .unlockedBy(getHasName(Items.EGG.asItem()), has(Items.EGG.asItem()))
-                .unlockedBy(getHasName(Items.SUGAR.asItem()), has(Items.SUGAR.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.CARROT_PIE.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.IRON_APPLE.get())
-                .define('I', Items.IRON_INGOT)
-                .define('A', Items.APPLE)
-                .pattern("III")
-                .pattern("IAI")
-                .pattern("III")
-                .unlockedBy(getHasName(Items.IRON_INGOT.asItem()), has(Items.IRON_INGOT.asItem()))
-                .unlockedBy(getHasName(Items.APPLE.asItem()), has(Items.APPLE.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_APPLE.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.DIAMOND_APPLE.get())
-                .define('D', Items.DIAMOND)
-                .define('A', Items.APPLE)
-                .pattern("DDD")
-                .pattern("DAD")
-                .pattern("DDD")
-                .unlockedBy(getHasName(Items.DIAMOND.asItem()), has(Items.DIAMOND.asItem()))
-                .unlockedBy(getHasName(Items.APPLE.asItem()), has(Items.APPLE.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_APPLE.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.EMERALD_APPLE.get())
-                .define('E', Items.EMERALD)
-                .define('A', Items.APPLE)
-                .pattern("EEE")
-                .pattern("EAE")
-                .pattern("EEE")
-                .unlockedBy(getHasName(Items.EMERALD.asItem()), has(Items.EMERALD.asItem()))
-                .unlockedBy(getHasName(Items.APPLE.asItem()), has(Items.APPLE.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_APPLE.get())));
-
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.APPLE.asItem()), RecipeCategory.FOOD, MoreFoodItems.COOKED_APPLE.get(),1.0f,200, RecipeSerializer.SMELTING_RECIPE)
-                .unlockedBy(getHasName(Items.APPLE),has(Items.APPLE))
-                .save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_APPLE.get()) + "_smelting"));
-
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.APPLE.asItem()), RecipeCategory.FOOD, MoreFoodItems.COOKED_APPLE.get(),1.0f,100, RecipeSerializer.SMOKING_RECIPE)
-                .unlockedBy(getHasName(Items.APPLE),has(Items.APPLE))
-                .save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_APPLE.get()) + "_smoking"));
-
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.APPLE.asItem()), RecipeCategory.FOOD, MoreFoodItems.COOKED_APPLE.get(),1.0f,600, RecipeSerializer.CAMPFIRE_COOKING_RECIPE)
-                .unlockedBy(getHasName(Items.APPLE),has(Items.APPLE))
-                .save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_APPLE.get()) + "_campfire_cooking"));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MoreFoodItems.APPLE_PIECES.get(),4)
-                .requires(Items.APPLE.asItem())
-                .unlockedBy(getHasName(Items.APPLE.asItem()), has(Items.CARROT.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.APPLE_PIECES.get())));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, MoreFoodItems.APPLE_SOUP.get())
-                .requires(Items.BOWL.asItem())
-                .requires(MoreFoodItems.APPLE_PIECES.get())
-                .requires(Items.APPLE.asItem())
-                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
-                .unlockedBy(getHasName(MoreFoodItems.APPLE_PIECES.get()), has(MoreFoodItems.APPLE_PIECES.get()))
-                .unlockedBy(getHasName(Items.APPLE.asItem()), has(Items.APPLE.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.APPLE_SOUP.get())));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, MoreFoodItems.APPLE_BREAD.get())
-                .requires(Items.APPLE.asItem())
-                .requires(Items.WHEAT.asItem())
-                .requires(MoreFoodItems.APPLE_PIECES.get())
-                .unlockedBy(getHasName(Items.APPLE.asItem()), has(Items.APPLE.asItem()))
-                .unlockedBy(getHasName(Items.WHEAT.asItem()), has(Items.WHEAT.asItem()))
-                .unlockedBy(getHasName(MoreFoodItems.APPLE_PIECES.get()), has(MoreFoodItems.APPLE_PIECES.get()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.APPLE_BREAD.get())));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, MoreFoodItems.APPLE_PIE.get())
-                .requires(Items.APPLE.asItem())
-                .requires(Items.EGG.asItem())
-                .requires(Items.SUGAR.asItem())
-                .unlockedBy(getHasName(Items.APPLE.asItem()), has(Items.APPLE.asItem()))
-                .unlockedBy(getHasName(Items.EGG.asItem()), has(Items.EGG.asItem()))
-                .unlockedBy(getHasName(Items.SUGAR.asItem()), has(Items.SUGAR.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.APPLE_PIE.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.IRON_KELP.get())
-                .define('I', Items.IRON_INGOT)
-                .define('K', Items.DRIED_KELP)
-                .pattern("III")
-                .pattern("IKI")
-                .pattern("III")
-                .unlockedBy(getHasName(Items.IRON_INGOT.asItem()), has(Items.IRON_INGOT.asItem()))
-                .unlockedBy(getHasName(Items.DRIED_KELP.asItem()), has(Items.DRIED_KELP.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_KELP.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.GOLD_KELP.get())
+    private static ShapedRecipeBuilder createGoldenFoodRecipe(ItemLike output, ItemLike input) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, output)
                 .define('G', Items.GOLD_INGOT)
-                .define('K', Items.DRIED_KELP)
+                .define('#', input)
                 .pattern("GGG")
-                .pattern("GKG")
+                .pattern("G#G")
                 .pattern("GGG")
-                .unlockedBy(getHasName(Items.GOLD_INGOT.asItem()), has(Items.GOLD_INGOT.asItem()))
-                .unlockedBy(getHasName(Items.DRIED_KELP.asItem()), has(Items.DRIED_KELP.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.GOLD_KELP.get())));
+                .unlockedBy(getHasName(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
+                .unlockedBy(getHasName(input), has(input));
+    }
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.DIAMOND_KELP.get())
+    private static ShapedRecipeBuilder createDiamondFoodRecipe(ItemLike output, ItemLike input) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, output)
                 .define('D', Items.DIAMOND)
-                .define('K', Items.DRIED_KELP)
+                .define('#', input)
                 .pattern("DDD")
-                .pattern("DKD")
+                .pattern("D#D")
                 .pattern("DDD")
-                .unlockedBy(getHasName(Items.DIAMOND.asItem()), has(Items.DIAMOND.asItem()))
-                .unlockedBy(getHasName(Items.DRIED_KELP.asItem()), has(Items.DRIED_KELP.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_KELP.get())));
+                .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
+                .unlockedBy(getHasName(input), has(input));
+    }
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.EMERALD_KELP.get())
+    private static ShapedRecipeBuilder createEmeraldFoodRecipe(ItemLike output, ItemLike input) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, output)
                 .define('E', Items.EMERALD)
-                .define('K', Items.DRIED_KELP)
+                .define('#', input)
                 .pattern("EEE")
-                .pattern("EKE")
+                .pattern("E#E")
                 .pattern("EEE")
-                .unlockedBy(getHasName(Items.EMERALD.asItem()), has(Items.EMERALD.asItem()))
-                .unlockedBy(getHasName(Items.DRIED_KELP.asItem()), has(Items.DRIED_KELP.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_KELP.get())));
+                .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
+                .unlockedBy(getHasName(input), has(input));
+    }
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MoreFoodItems.KELP_PIECES.get(),4)
-                .requires(Items.KELP.asItem())
-                .unlockedBy(getHasName(Items.APPLE.asItem()), has(Items.KELP.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.KELP_PIECES.get())));
+    private static SimpleCookingRecipeBuilder createSmeltingRecipe(ItemLike output, ItemLike input) {
+        return SimpleCookingRecipeBuilder.generic(Ingredient.of(input), RecipeCategory.FOOD, output,1.0f,200, RecipeSerializer.SMELTING_RECIPE).unlockedBy(getHasName(input), has(input));
+    }
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, MoreFoodItems.KELP_SOUP.get())
-                .requires(Items.BOWL.asItem())
-                .requires(MoreFoodItems.KELP_PIECES.get())
-                .requires(Items.KELP.asItem())
-                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
-                .unlockedBy(getHasName(MoreFoodItems.KELP_PIECES.get()), has(MoreFoodItems.KELP_PIECES.get()))
-                .unlockedBy(getHasName(Items.KELP.asItem()), has(Items.KELP.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.KELP_SOUP.get())));
+    private static SimpleCookingRecipeBuilder createSmokingRecipe(ItemLike output, ItemLike input) {
+        return SimpleCookingRecipeBuilder.generic(Ingredient.of(input), RecipeCategory.FOOD, output,1.0f,100, RecipeSerializer.SMOKING_RECIPE).unlockedBy(getHasName(input), has(input));
+    }
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MoreFoodItems.POTATO_PIECES.get(),4)
-                .requires(Items.POTATO.asItem())
-                .unlockedBy(getHasName(Items.POTATO.asItem()), has(Items.POTATO.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.POTATO_PIECES.get())));
+    private static SimpleCookingRecipeBuilder createCampfireCookingRecipe(ItemLike output, ItemLike input) {
+        return SimpleCookingRecipeBuilder.generic(Ingredient.of(input), RecipeCategory.FOOD, output,1.0f,600, RecipeSerializer.CAMPFIRE_COOKING_RECIPE).unlockedBy(getHasName(input), has(input));
+    }
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.IRON_POTATO.get())
-                .define('I', Items.IRON_INGOT)
-                .define('P', Items.POTATO)
-                .pattern("III")
-                .pattern("IPI")
-                .pattern("III")
-                .unlockedBy(getHasName(Items.IRON_INGOT.asItem()), has(Items.IRON_INGOT.asItem()))
-                .unlockedBy(getHasName(Items.POTATO.asItem()), has(Items.POTATO.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_POTATO.get())));
+    private static ShapelessRecipeBuilder createPiecesRecipe(ItemLike output, ItemLike input) {
+        return ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, output, 4)
+                .requires(input)
+                .unlockedBy(getHasName(input), has(input));
+    }
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.GOLD_POTATO.get())
-                .define('G', Items.GOLD_INGOT)
-                .define('P', Items.POTATO)
-                .pattern("GGG")
-                .pattern("GPG")
-                .pattern("GGG")
-                .unlockedBy(getHasName(Items.GOLD_INGOT.asItem()), has(Items.GOLD_INGOT.asItem()))
-                .unlockedBy(getHasName(Items.POTATO.asItem()), has(Items.POTATO.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.GOLD_POTATO.get())));
+    private static ShapelessRecipeBuilder createSoupRecipe(ItemLike output, ItemLike input, ItemLike material) {
+        return ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, output)
+                .requires(Items.BOWL)
+                .requires(input)
+                .requires(material)
+                .unlockedBy(getHasName(Items.BOWL), has(Items.BOWL))
+                .unlockedBy(getHasName(input), has(input))
+                .unlockedBy(getHasName(material), has(material));
+    }
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.DIAMOND_POTATO.get())
-                .define('D', Items.DIAMOND)
-                .define('P', Items.POTATO)
-                .pattern("DDD")
-                .pattern("DPD")
-                .pattern("DDD")
-                .unlockedBy(getHasName(Items.DIAMOND.asItem()), has(Items.DIAMOND.asItem()))
-                .unlockedBy(getHasName(Items.POTATO.asItem()), has(Items.POTATO.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_POTATO.get())));
+    private static ShapelessRecipeBuilder createBreadRecipe(ItemLike output, ItemLike input, ItemLike material) {
+        return ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, output)
+                .requires(Items.WHEAT)
+                .requires(input)
+                .requires(material)
+                .unlockedBy(getHasName(Items.WHEAT), has(Items.WHEAT))
+                .unlockedBy(getHasName(input), has(input))
+                .unlockedBy(getHasName(material), has(material));
+    }
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.EMERALD_POTATO.get())
-                .define('E', Items.EMERALD)
-                .define('P', Items.POTATO)
-                .pattern("EEE")
-                .pattern("EPE")
-                .pattern("EEE")
-                .unlockedBy(getHasName(Items.EMERALD.asItem()), has(Items.EMERALD.asItem()))
-                .unlockedBy(getHasName(Items.POTATO.asItem()), has(Items.POTATO.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_POTATO.get())));
+    private static ShapelessRecipeBuilder createPieRecipe(ItemLike output, ItemLike input) {
+        return ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, output)
+                .requires(input)
+                .requires(Items.EGG)
+                .requires(Items.SUGAR)
+                .unlockedBy(getHasName(input), has(input))
+                .unlockedBy(getHasName(Items.EGG), has(Items.EGG))
+                .unlockedBy(getHasName(Items.SUGAR), has(Items.SUGAR));
+    }
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, MoreFoodItems.POTATO_SOUP.get())
-                .requires(Items.BOWL.asItem())
-                .requires(MoreFoodItems.POTATO_PIECES.get())
-                .requires(Items.POTATO.asItem())
-                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
-                .unlockedBy(getHasName(MoreFoodItems.POTATO_PIECES.get()), has(MoreFoodItems.POTATO_PIECES.get()))
-                .unlockedBy(getHasName(Items.POTATO.asItem()), has(Items.POTATO.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.POTATO_SOUP.get())));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, MoreFoodItems.POTATO_BREAD.get())
-                .requires(Items.POTATO.asItem())
-                .requires(Items.WHEAT.asItem())
-                .requires(MoreFoodItems.POTATO_PIECES.get())
-                .unlockedBy(getHasName(Items.POTATO.asItem()), has(Items.POTATO.asItem()))
-                .unlockedBy(getHasName(Items.WHEAT.asItem()), has(Items.WHEAT.asItem()))
-                .unlockedBy(getHasName(MoreFoodItems.POTATO_PIECES.get()), has(MoreFoodItems.POTATO_PIECES.get()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.POTATO_BREAD.get())));
-
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.PHANTOM_MEMBRANE.asItem()), RecipeCategory.FOOD, MoreFoodItems.COOKED_PHANTOM.get(),1.0f,200, RecipeSerializer.SMELTING_RECIPE)
-                .unlockedBy(getHasName(Items.PHANTOM_MEMBRANE),has(Items.PHANTOM_MEMBRANE))
-                .save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_PHANTOM.get()) + "_smelting"));
-
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.PHANTOM_MEMBRANE.asItem()), RecipeCategory.FOOD, MoreFoodItems.COOKED_PHANTOM.get(),1.0f,100, RecipeSerializer.SMOKING_RECIPE)
-                .unlockedBy(getHasName(Items.PHANTOM_MEMBRANE),has(Items.PHANTOM_MEMBRANE))
-                .save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_PHANTOM.get()) + "_smoking"));
-
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.PHANTOM_MEMBRANE.asItem()), RecipeCategory.FOOD, MoreFoodItems.COOKED_PHANTOM.get(),1.0f,600, RecipeSerializer.CAMPFIRE_COOKING_RECIPE)
-                .unlockedBy(getHasName(Items.PHANTOM_MEMBRANE),has(Items.PHANTOM_MEMBRANE))
-                .save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_PHANTOM.get()) + "_campfire_cooking"));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MoreFoodItems.PHANTOM_PIECES.get(),4)
-                .requires(Items.PHANTOM_MEMBRANE.asItem())
-                .unlockedBy(getHasName(Items.PHANTOM_MEMBRANE.asItem()), has(Items.PHANTOM_MEMBRANE.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.PHANTOM_PIECES.get())));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, MoreFoodItems.PHANTOM_SOUP.get())
-                .requires(Items.BOWL.asItem())
-                .requires(MoreFoodItems.PHANTOM_PIECES.get())
-                .requires(Items.PHANTOM_MEMBRANE.asItem())
-                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
-                .unlockedBy(getHasName(MoreFoodItems.PHANTOM_PIECES.get()), has(MoreFoodItems.PHANTOM_PIECES.get()))
-                .unlockedBy(getHasName(Items.PHANTOM_MEMBRANE.asItem()), has(Items.PHANTOM_MEMBRANE.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.PHANTOM_SOUP.get())));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MoreFoodItems.PUFFERFISH_PIECES.get(),4)
-                .requires(Items.PUFFERFISH.asItem())
-                .unlockedBy(getHasName(Items.PUFFERFISH.asItem()), has(Items.PUFFERFISH.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.PUFFERFISH_PIECES.get())));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, MoreFoodItems.PUFFERFISH_SOUP.get())
-                .requires(Items.BOWL.asItem())
-                .requires(MoreFoodItems.PUFFERFISH_PIECES.get())
-                .requires(Items.PUFFERFISH.asItem())
-                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
-                .unlockedBy(getHasName(MoreFoodItems.PUFFERFISH_PIECES.get()), has(MoreFoodItems.PUFFERFISH_PIECES.get()))
-                .unlockedBy(getHasName(Items.PUFFERFISH.asItem()), has(Items.PUFFERFISH.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.PUFFERFISH_SOUP.get())));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, MoreFoodItems.PUMPKING_SOUP.get())
-                .requires(Items.BOWL.asItem())
-                .requires(Items.PUMPKIN_SEEDS.asItem())
-                .requires(Items.PUMPKIN.asItem())
-                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
-                .unlockedBy(getHasName(Items.PUMPKIN_SEEDS.asItem()), has(Items.PUMPKIN_SEEDS.asItem()))
-                .unlockedBy(getHasName(Items.PUMPKIN.asItem()), has(Items.PUMPKIN.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.PUMPKING_SOUP.get())));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, MoreFoodItems.PUMPKING_BREAD.get())
-                .requires(Items.PUMPKIN.asItem())
-                .requires(Items.WHEAT.asItem())
-                .requires(Items.PUMPKIN_SEEDS.asItem())
-                .unlockedBy(getHasName(Items.PUMPKIN.asItem()), has(Items.PUMPKIN.asItem()))
-                .unlockedBy(getHasName(Items.WHEAT.asItem()), has(Items.WHEAT.asItem()))
-                .unlockedBy(getHasName(Items.PUMPKIN_SEEDS.asItem()), has(Items.PUMPKIN_SEEDS.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.PUMPKING_BREAD.get())));
-
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.BAMBOO.asItem()), RecipeCategory.FOOD, MoreFoodItems.COOKED_BAMBOO.get(),1.0f,200, RecipeSerializer.SMELTING_RECIPE)
-                .unlockedBy(getHasName(Items.BAMBOO),has(Items.BAMBOO))
-                .save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_BAMBOO.get()) + "_smelting"));
-
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.BAMBOO.asItem()), RecipeCategory.FOOD, MoreFoodItems.COOKED_BAMBOO.get(),1.0f,100, RecipeSerializer.SMOKING_RECIPE)
-                .unlockedBy(getHasName(Items.BAMBOO),has(Items.BAMBOO))
-                .save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_BAMBOO.get()) + "_smoking"));
-
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.BAMBOO.asItem()), RecipeCategory.FOOD, MoreFoodItems.COOKED_BAMBOO.get(),1.0f,600, RecipeSerializer.CAMPFIRE_COOKING_RECIPE)
-                .unlockedBy(getHasName(Items.BAMBOO),has(Items.BAMBOO))
-                .save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.COOKED_BAMBOO.get()) + "_campfire_cooking"));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, MoreFoodItems.BAMBOO_PIECES.get(),4)
-                .requires(Items.BAMBOO.asItem())
-                .unlockedBy(getHasName(Items.BAMBOO.asItem()), has(Items.BAMBOO.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.BAMBOO_PIECES.get())));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, MoreFoodItems.BAMBOO_SOUP.get())
-                .requires(Items.BOWL.asItem())
-                .requires(MoreFoodItems.BAMBOO_PIECES.get())
-                .requires(Items.BAMBOO.asItem())
-                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
-                .unlockedBy(getHasName(MoreFoodItems.BAMBOO_PIECES.get()), has(MoreFoodItems.BAMBOO_PIECES.get()))
-                .unlockedBy(getHasName(Items.BAMBOO.asItem()), has(Items.BAMBOO.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.BAMBOO_SOUP.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.IRON_COOKED_RABBIT.get())
-                .define('I', Items.IRON_INGOT)
-                .define('R', Items.COOKED_RABBIT)
-                .pattern("III")
-                .pattern("IRI")
-                .pattern("III")
-                .unlockedBy(getHasName(Items.IRON_INGOT.asItem()), has(Items.IRON_INGOT.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_RABBIT.asItem()), has(Items.COOKED_RABBIT.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_COOKED_RABBIT.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.GOLD_COOKED_RABBIT.get())
-                .define('G', Items.GOLD_INGOT)
-                .define('R', Items.COOKED_RABBIT)
-                .pattern("GGG")
-                .pattern("GRG")
-                .pattern("GGG")
-                .unlockedBy(getHasName(Items.GOLD_INGOT.asItem()), has(Items.GOLD_INGOT.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_RABBIT.asItem()), has(Items.COOKED_RABBIT.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.GOLD_COOKED_RABBIT.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.DIAMOND_COOKED_RABBIT.get())
-                .define('D', Items.DIAMOND)
-                .define('R', Items.COOKED_RABBIT)
-                .pattern("DDD")
-                .pattern("DRD")
-                .pattern("DDD")
-                .unlockedBy(getHasName(Items.DIAMOND.asItem()), has(Items.DIAMOND.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_RABBIT.asItem()), has(Items.COOKED_RABBIT.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_COOKED_RABBIT.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.EMERALD_COOKED_RABBIT.get())
-                .define('E', Items.EMERALD)
-                .define('R', Items.COOKED_RABBIT)
-                .pattern("EEE")
-                .pattern("ERE")
-                .pattern("EEE")
-                .unlockedBy(getHasName(Items.EMERALD.asItem()), has(Items.EMERALD.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_RABBIT.asItem()), has(Items.COOKED_RABBIT.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_COOKED_RABBIT.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.IRON_MELON_SLICE.get())
-                .define('I', Items.IRON_INGOT)
-                .define('M', Items.MELON_SLICE)
-                .pattern("III")
-                .pattern("IMI")
-                .pattern("III")
-                .unlockedBy(getHasName(Items.IRON_INGOT.asItem()), has(Items.IRON_INGOT.asItem()))
-                .unlockedBy(getHasName(Items.MELON_SLICE.asItem()), has(Items.MELON_SLICE.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_MELON_SLICE.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.GOLD_MELON_SLICE.get())
-                .define('G', Items.GOLD_INGOT)
-                .define('M', Items.MELON_SLICE)
-                .pattern("GGG")
-                .pattern("GMG")
-                .pattern("GGG")
-                .unlockedBy(getHasName(Items.GOLD_INGOT.asItem()), has(Items.GOLD_INGOT.asItem()))
-                .unlockedBy(getHasName(Items.MELON_SLICE.asItem()), has(Items.MELON_SLICE.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.GOLD_MELON_SLICE.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.DIAMOND_MELON_SLICE.get())
-                .define('D', Items.DIAMOND)
-                .define('M', Items.MELON_SLICE)
-                .pattern("DDD")
-                .pattern("DMD")
-                .pattern("DDD")
-                .unlockedBy(getHasName(Items.DIAMOND.asItem()), has(Items.DIAMOND.asItem()))
-                .unlockedBy(getHasName(Items.MELON_SLICE.asItem()), has(Items.MELON_SLICE.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_MELON_SLICE.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.EMERALD_MELON_SLICE.get())
-                .define('E', Items.EMERALD)
-                .define('M', Items.MELON_SLICE)
-                .pattern("EEE")
-                .pattern("EME")
-                .pattern("EEE")
-                .unlockedBy(getHasName(Items.EMERALD.asItem()), has(Items.EMERALD.asItem()))
-                .unlockedBy(getHasName(Items.MELON_SLICE.asItem()), has(Items.MELON_SLICE.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_MELON_SLICE.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.IRON_COOKED_CHICKEN.get())
-                .define('I', Items.IRON_INGOT)
-                .define('C', Items.COOKED_CHICKEN)
-                .pattern("III")
-                .pattern("ICI")
-                .pattern("III")
-                .unlockedBy(getHasName(Items.IRON_INGOT.asItem()), has(Items.IRON_INGOT.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_CHICKEN.asItem()), has(Items.COOKED_CHICKEN.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_COOKED_CHICKEN.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.GOLD_COOKED_CHICKEN.get())
-                .define('G', Items.GOLD_INGOT)
-                .define('C', Items.COOKED_CHICKEN)
-                .pattern("GGG")
-                .pattern("GCG")
-                .pattern("GGG")
-                .unlockedBy(getHasName(Items.GOLD_INGOT.asItem()), has(Items.GOLD_INGOT.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_CHICKEN.asItem()), has(Items.COOKED_CHICKEN.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.GOLD_COOKED_CHICKEN.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.DIAMOND_COOKED_CHICKEN.get())
-                .define('D', Items.DIAMOND)
-                .define('C', Items.COOKED_CHICKEN)
-                .pattern("DDD")
-                .pattern("DCD")
-                .pattern("DDD")
-                .unlockedBy(getHasName(Items.DIAMOND.asItem()), has(Items.DIAMOND.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_CHICKEN.asItem()), has(Items.COOKED_CHICKEN.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_COOKED_CHICKEN.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.EMERALD_COOKED_CHICKEN.get())
-                .define('E', Items.EMERALD)
-                .define('C', Items.COOKED_CHICKEN)
-                .pattern("EEE")
-                .pattern("ECE")
-                .pattern("EEE")
-                .unlockedBy(getHasName(Items.EMERALD.asItem()), has(Items.EMERALD.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_CHICKEN.asItem()), has(Items.COOKED_CHICKEN.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_COOKED_CHICKEN.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.IRON_COOKED_MUTTON.get())
-                .define('I', Items.IRON_INGOT)
-                .define('M', Items.COOKED_MUTTON)
-                .pattern("III")
-                .pattern("IMI")
-                .pattern("III")
-                .unlockedBy(getHasName(Items.IRON_INGOT.asItem()), has(Items.IRON_INGOT.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_MUTTON.asItem()), has(Items.COOKED_MUTTON.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_COOKED_MUTTON.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.GOLD_COOKED_MUTTON.get())
-                .define('G', Items.GOLD_INGOT)
-                .define('M', Items.COOKED_MUTTON)
-                .pattern("GGG")
-                .pattern("GMG")
-                .pattern("GGG")
-                .unlockedBy(getHasName(Items.GOLD_INGOT.asItem()), has(Items.GOLD_INGOT.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_MUTTON.asItem()), has(Items.COOKED_MUTTON.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.GOLD_COOKED_MUTTON.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.DIAMOND_COOKED_MUTTON.get())
-                .define('D', Items.DIAMOND)
-                .define('M', Items.COOKED_MUTTON)
-                .pattern("DDD")
-                .pattern("DMD")
-                .pattern("DDD")
-                .unlockedBy(getHasName(Items.DIAMOND.asItem()), has(Items.DIAMOND.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_MUTTON.asItem()), has(Items.COOKED_MUTTON.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_COOKED_MUTTON.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.EMERALD_COOKED_MUTTON.get())
-                .define('E', Items.EMERALD)
-                .define('M', Items.COOKED_MUTTON)
-                .pattern("EEE")
-                .pattern("EME")
-                .pattern("EEE")
-                .unlockedBy(getHasName(Items.EMERALD.asItem()), has(Items.EMERALD.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_MUTTON.asItem()), has(Items.COOKED_MUTTON.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_COOKED_MUTTON.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.IRON_COOKED_PORKCHOP.get())
-                .define('I', Items.IRON_INGOT)
-                .define('P', Items.COOKED_PORKCHOP)
-                .pattern("III")
-                .pattern("IPI")
-                .pattern("III")
-                .unlockedBy(getHasName(Items.IRON_INGOT.asItem()), has(Items.IRON_INGOT.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_PORKCHOP.asItem()), has(Items.COOKED_PORKCHOP.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_COOKED_PORKCHOP.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.GOLD_COOKED_PORKCHOP.get())
-                .define('G', Items.GOLD_INGOT)
-                .define('P', Items.COOKED_PORKCHOP)
-                .pattern("GGG")
-                .pattern("GPG")
-                .pattern("GGG")
-                .unlockedBy(getHasName(Items.GOLD_INGOT.asItem()), has(Items.GOLD_INGOT.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_PORKCHOP.asItem()), has(Items.COOKED_PORKCHOP.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.GOLD_COOKED_PORKCHOP.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.DIAMOND_COOKED_PORKCHOP.get())
-                .define('D', Items.DIAMOND)
-                .define('P', Items.COOKED_PORKCHOP)
-                .pattern("DDD")
-                .pattern("DPD")
-                .pattern("DDD")
-                .unlockedBy(getHasName(Items.DIAMOND.asItem()), has(Items.DIAMOND.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_PORKCHOP.asItem()), has(Items.COOKED_PORKCHOP.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_COOKED_PORKCHOP.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.EMERALD_COOKED_PORKCHOP.get())
-                .define('E', Items.EMERALD)
-                .define('P', Items.COOKED_PORKCHOP)
-                .pattern("EEE")
-                .pattern("EPE")
-                .pattern("EEE")
-                .unlockedBy(getHasName(Items.EMERALD.asItem()), has(Items.EMERALD.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_PORKCHOP.asItem()), has(Items.COOKED_PORKCHOP.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_COOKED_PORKCHOP.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.IRON_COOKED_BEEF.get())
-                .define('I', Items.IRON_INGOT)
-                .define('B', Items.COOKED_BEEF)
-                .pattern("III")
-                .pattern("IBI")
-                .pattern("III")
-                .unlockedBy(getHasName(Items.IRON_INGOT.asItem()), has(Items.IRON_INGOT.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_BEEF.asItem()), has(Items.COOKED_BEEF.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.IRON_COOKED_BEEF.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.GOLD_COOKED_BEEF.get())
-                .define('G', Items.GOLD_INGOT)
-                .define('B', Items.COOKED_BEEF)
-                .pattern("GGG")
-                .pattern("GBG")
-                .pattern("GGG")
-                .unlockedBy(getHasName(Items.GOLD_INGOT.asItem()), has(Items.GOLD_INGOT.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_BEEF.asItem()), has(Items.COOKED_BEEF.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.GOLD_COOKED_BEEF.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.DIAMOND_COOKED_BEEF.get())
-                .define('D', Items.DIAMOND)
-                .define('B', Items.COOKED_BEEF)
-                .pattern("DDD")
-                .pattern("DBD")
-                .pattern("DDD")
-                .unlockedBy(getHasName(Items.DIAMOND.asItem()), has(Items.DIAMOND.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_BEEF.asItem()), has(Items.COOKED_BEEF.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.DIAMOND_COOKED_BEEF.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.EMERALD_COOKED_BEEF.get())
-                .define('E', Items.EMERALD)
-                .define('B', Items.COOKED_BEEF)
-                .pattern("EEE")
-                .pattern("EBE")
-                .pattern("EEE")
-                .unlockedBy(getHasName(Items.EMERALD.asItem()), has(Items.EMERALD.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_BEEF.asItem()), has(Items.COOKED_BEEF.asItem()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.EMERALD_COOKED_BEEF.get())));
-
-
-
-
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.RICE_CHICKENBOWL.get())
+    private static ShapedRecipeBuilder createRiceBowlRecipe(ItemLike output, ItemLike input) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, output)
                 .define('B', Items.BOWL)
-                .define('C', Items.COOKED_CHICKEN)
                 .define('R', MoreFoodItems.RICE.get())
-                .pattern("  C")
+                .define('#', input)
+                .pattern("  #")
                 .pattern("RRR")
                 .pattern(" B ")
-                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_CHICKEN.asItem()), has(Items.COOKED_CHICKEN.asItem()))
+                .unlockedBy(getHasName(Items.BOWL), has(Items.BOWL))
                 .unlockedBy(getHasName(MoreFoodItems.RICE.get()), has(MoreFoodItems.RICE.get()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.RICE_CHICKENBOWL.get())));
+                .unlockedBy(getHasName(input), has(input));
+    }
 
-
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.RICE_SALMONBOWL.get())
+    private static ShapedRecipeBuilder createRiceVegetableBowlRecipe() {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.RICE_VEGETABLEBOWL.get())
                 .define('B', Items.BOWL)
-                .define('C', Items.COOKED_SALMON)
                 .define('R', MoreFoodItems.RICE.get())
-                .pattern("  C")
-                .pattern("RRR")
-                .pattern(" B ")
-                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_SALMON.asItem()), has(Items.COOKED_SALMON.asItem()))
-                .unlockedBy(getHasName(MoreFoodItems.RICE.get()), has(MoreFoodItems.RICE.get()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.RICE_SALMONBOWL.get())));
-
-
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.RICE_CODBOWL.get())
-                .define('B', Items.BOWL)
-                .define('C', Items.COOKED_COD)
-                .define('R', MoreFoodItems.RICE.get())
-                .pattern("  C")
-                .pattern("RRR")
-                .pattern(" B ")
-                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
-                .unlockedBy(getHasName(Items.COOKED_COD.asItem()), has(Items.COOKED_COD.asItem()))
-                .unlockedBy(getHasName(MoreFoodItems.RICE.get()), has(MoreFoodItems.RICE.get()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.RICE_CODBOWL.get())));
-
-
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, MoreFoodItems.RICE_VEGETABLEBOWL.get())
-                .define('B', Items.BOWL)
-                .define('C', Items.CARROT)
                 .define('A', MoreFoodItems.COOKED_BAMBOO.get())
-                .define('R', MoreFoodItems.RICE.get())
+                .define('C', Items.CARROT)
                 .pattern(" AC")
                 .pattern("RRR")
                 .pattern(" B ")
-                .unlockedBy(getHasName(Items.BOWL.asItem()), has(Items.BOWL.asItem()))
-                .unlockedBy(getHasName(Items.CARROT.asItem()), has(Items.CARROT.asItem()))
-                .unlockedBy(getHasName(MoreFoodItems.RICE_VEGETABLEBOWL.get()), has(MoreFoodItems.RICE_VEGETABLEBOWL.get()))
+                .unlockedBy(getHasName(Items.BOWL), has(Items.BOWL))
                 .unlockedBy(getHasName(MoreFoodItems.RICE.get()), has(MoreFoodItems.RICE.get()))
-                .save(consumer,new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.RICE_VEGETABLEBOWL.get())));
-
-
+                .unlockedBy(getHasName(MoreFoodItems.COOKED_BAMBOO.get()), has(MoreFoodItems.COOKED_BAMBOO.get()))
+                .unlockedBy(getHasName(Items.CARROT), has(Items.CARROT));
     }
 }
