@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "morefood:cooked_bamboo"
+    },
+    "B": {
+      "item": "minecraft:bowl"
+    },
+    "C": {
+      "item": "minecraft:carrot"
+    },
+    "R": {
+      "item": "morefood:rice"
+    }
+  },
+  "pattern": [
+    " AC",
+    "RRR",
+    " B "
+  ],
+  "result": {
+    "item": "morefood:rice_vegetablebowl"
+  },
+  "show_notification": true
+}

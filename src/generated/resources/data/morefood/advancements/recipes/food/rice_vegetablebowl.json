@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bowl": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bowl"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_carrot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:carrot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_rice": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "morefood:rice"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_rice_vegetablebowl": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "morefood:rice_vegetablebowl"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "morefood:rice_vegetablebowl"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_bowl",
+      "has_carrot",
+      "has_rice_vegetablebowl",
+      "has_rice",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "morefood:rice_vegetablebowl"
+    ]
+  },
+  "sends_telemetry_event": false
+}
