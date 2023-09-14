@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:carrot"
+    },
+    "K": {
+      "item": "minecraft:kelp"
+    },
+    "R": {
+      "item": "morefood:rice"
+    }
+  },
+  "pattern": [
+    "   ",
+    "R#R",
+    "KKK"
+  ],
+  "result": {
+    "item": "morefood:sushi_carrot"
+  },
+  "show_notification": true
+}

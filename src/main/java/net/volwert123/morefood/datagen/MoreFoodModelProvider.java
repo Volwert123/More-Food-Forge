@@ -84,6 +84,10 @@ public class MoreFoodModelProvider extends ItemModelProvider {
         simpleItem(MoreFoodItems.RICE_SALMONBOWL);
         simpleItem(MoreFoodItems.RICE_CODBOWL);
         simpleItem(MoreFoodItems.RICE_VEGETABLEBOWL);
+        simpleItem(MoreFoodItems.SUSHI_BAMBOO);
+        simpleItem(MoreFoodItems.SUSHI_CARROT);
+        simpleItem(MoreFoodItems.SUSHI_BEETROOT);
+        simpleItem(MoreFoodItems.SUSHI_SALMON);
     }
 
     private void simpleItem(RegistryObject<Item> item){

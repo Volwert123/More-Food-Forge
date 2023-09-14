@@ -97,6 +97,12 @@ public class MoreFoodItems {
     public static final RegistryObject<Item> RICE_CODBOWL = ITEMS.register("rice_codbowl", () -> new RiceBowlItem(new Item.Properties().food(registerFoodValues(10, 5f).build())));
     public static final RegistryObject<Item> RICE_VEGETABLEBOWL = ITEMS.register("rice_vegetablebowl", () -> new RiceBowlItem(new Item.Properties().food(registerFoodValues(9, 4.5f).build())));
 
+    public static final RegistryObject<Item> SUSHI_BAMBOO = ITEMS.register("sushi_bamboo", () -> new Item(new Item.Properties().food(registerFoodValues(5, 2.5f).build())));
+    public static final RegistryObject<Item> SUSHI_CARROT = ITEMS.register("sushi_carrot", () -> new Item(new Item.Properties().food(registerFoodValues(5, 2.5f).build())));
+    public static final RegistryObject<Item> SUSHI_BEETROOT = ITEMS.register("sushi_beetroot", () -> new Item(new Item.Properties().food(registerFoodValues(5, 2.5f).build())));
+    public static final RegistryObject<Item> SUSHI_SALMON = ITEMS.register("sushi_salmon", () -> new Item(new Item.Properties().food(registerFoodValues(5, 2.5f).build())));
+
+
     private static FoodProperties.Builder registerFoodValues(int nutrition, float saturation) {
         return new FoodProperties.Builder().nutrition(nutrition).saturationMod(saturation);
     }

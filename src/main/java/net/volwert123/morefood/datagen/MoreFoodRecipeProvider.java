@@ -110,6 +110,13 @@ public class MoreFoodRecipeProvider extends RecipeProvider implements ICondition
         createRiceBowlRecipe(MoreFoodItems.RICE_SALMONBOWL.get(), Items.COOKED_SALMON).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.RICE_SALMONBOWL.get())));
         createRiceBowlRecipe(MoreFoodItems.RICE_CODBOWL.get(), Items.COOKED_COD).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.RICE_CODBOWL.get())));
         createRiceVegetableBowlRecipe().save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.RICE_VEGETABLEBOWL.get())));
+
+        createSushiRecipe(MoreFoodItems.SUSHI_BAMBOO.get(), Items.BAMBOO).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.SUSHI_BAMBOO.get())));
+        createSushiRecipe(MoreFoodItems.SUSHI_CARROT.get(), Items.CARROT).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.SUSHI_CARROT.get())));
+        createSushiRecipe(MoreFoodItems.SUSHI_BEETROOT.get(), Items.BEETROOT).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.SUSHI_BEETROOT.get())));
+        createSushiRecipe(MoreFoodItems.SUSHI_SALMON.get(), Items.SALMON).save(consumer, new ResourceLocation(MoreFood.MOD_ID, getItemName(MoreFoodItems.SUSHI_SALMON.get())));
+
+
     }
 
     private static ShapedRecipeBuilder createIronFoodRecipe(ItemLike output, ItemLike input) {
@@ -231,4 +238,18 @@ public class MoreFoodRecipeProvider extends RecipeProvider implements ICondition
                 .unlockedBy(getHasName(MoreFoodItems.COOKED_BAMBOO.get()), has(MoreFoodItems.COOKED_BAMBOO.get()))
                 .unlockedBy(getHasName(Items.CARROT), has(Items.CARROT));
     }
+
+    private static ShapedRecipeBuilder createSushiRecipe(ItemLike output, ItemLike input) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, output)
+                .define('K', Items.KELP)
+                .define('R', MoreFoodItems.RICE.get())
+                .define('#', input)
+                .pattern("   ")
+                .pattern("R#R")
+                .pattern("KKK")
+                .unlockedBy(getHasName(Items.KELP), has(Items.KELP))
+                .unlockedBy(getHasName(MoreFoodItems.RICE.get()), has(MoreFoodItems.RICE.get()))
+                .unlockedBy(getHasName(input), has(input));
+    }
+
 }

@@ -97,6 +97,10 @@ public class MoreFood {
             event.accept(MoreFoodItems.RICE_SALMONBOWL);
             event.accept(MoreFoodItems.RICE_CODBOWL);
             event.accept(MoreFoodItems.RICE_VEGETABLEBOWL);
+            event.accept(MoreFoodItems.SUSHI_BAMBOO);
+            event.accept(MoreFoodItems.SUSHI_CARROT);
+            event.accept(MoreFoodItems.SUSHI_BEETROOT);
+            event.accept(MoreFoodItems.SUSHI_SALMON);
         }
     }
 }

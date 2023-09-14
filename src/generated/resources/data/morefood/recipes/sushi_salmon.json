@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:salmon"
+    },
+    "K": {
+      "item": "minecraft:kelp"
+    },
+    "R": {
+      "item": "morefood:rice"
+    }
+  },
+  "pattern": [
+    "   ",
+    "R#R",
+    "KKK"
+  ],
+  "result": {
+    "item": "morefood:sushi_salmon"
+  },
+  "show_notification": true
+}
