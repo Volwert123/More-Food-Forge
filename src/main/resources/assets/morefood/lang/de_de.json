@@ -66,5 +66,9 @@
   "item.morefood.rice_chickenbowl": "Hühnchen Reis Schale",
   "item.morefood.rice_codbowl": "Kabeljau Reis Schale",
   "item.morefood.rice_salmonbowl": "Lachs Reis Schale",
-  "item.morefood.rice_vegetablebowl": "Gemüse Reis Schale"
+  "item.morefood.rice_vegetablebowl": "Gemüse Reis Schale",
+  "item.morefood.sushi_bamboo": "Sushi-Bambus",
+  "item.morefood.sushi_carrot": "Sushi-Karotten",
+  "item.morefood.sushi_beetroot": "Sushi-Rote-Bete",
+  "item.morefood.sushi_salmon": "Sushi-Lachs"
 }

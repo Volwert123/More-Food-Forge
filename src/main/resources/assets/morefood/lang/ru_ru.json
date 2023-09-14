@@ -66,5 +66,9 @@
   "item.morefood.rice_chickenbowl": "Миска с курицей и рисом",
   "item.morefood.rice_codbowl": "Миска с рисовой треской",
   "item.morefood.rice_salmonbowl": "Рисовая миска с лососем",
-  "item.morefood.rice_vegetablebowl": "Овощная миска с рисом"
+  "item.morefood.rice_vegetablebowl": "Овощная миска с рисом",
+  "item.morefood.sushi_bamboo": "Суши Бамбук",
+  "item.morefood.sushi_carrot": "Морковь для суши",
+  "item.morefood.sushi_beetroot": "Свекла для суши",
+  "item.morefood.sushi_salmon": "Лосось для суши"
 }
